@@ -1,0 +1,63 @@
+# Checking section: Patricia Tree...
+ok     1 - Create Patricia Tree
+PASS: bgpstream-test-utils-patricia 1 - Create Patricia Tree
+ok     2 - Create Patricia Tree Result
+PASS: bgpstream-test-utils-patricia 2 - Create Patricia Tree Result
+ok     3 - Insert into Patricia Tree v4: 192.0.43.0/24
+PASS: bgpstream-test-utils-patricia 3 - Insert into Patricia Tree v4: 192.0.43.0/24
+ok     4 - Insert into Patricia Tree v4: 130.217.0.0/16
+PASS: bgpstream-test-utils-patricia 4 - Insert into Patricia Tree v4: 130.217.0.0/16
+ok     5 - Insert into Patricia Tree v4: 130.217.250.0/24
+PASS: bgpstream-test-utils-patricia 5 - Insert into Patricia Tree v4: 130.217.250.0/24
+ok     6 - Insert into Patricia Tree v4: 130.217.0.0/16
+PASS: bgpstream-test-utils-patricia 6 - Insert into Patricia Tree v4: 130.217.0.0/16
+ok     7 - Insert into Patricia Tree v6: 2001:500:88::/48
+PASS: bgpstream-test-utils-patricia 7 - Insert into Patricia Tree v6: 2001:500:88::/48
+ok     8 - Insert into Patricia Tree v6: 2001:500:88:beef::/64
+PASS: bgpstream-test-utils-patricia 8 - Insert into Patricia Tree v6: 2001:500:88:beef::/64
+ok     9 - Insert into Patricia Tree v6: 2001:48d0:101:501::/64
+PASS: bgpstream-test-utils-patricia 9 - Insert into Patricia Tree v6: 2001:48d0:101:501::/64
+ok     10 - Insert into Patricia Tree v6: 2001:48d0:101:501:beef::/96
+PASS: bgpstream-test-utils-patricia 10 - Insert into Patricia Tree v6: 2001:48d0:101:501:beef::/96
+ok     11 - Insert into Patricia Tree v6: 2001:500:88:beef::/64
+PASS: bgpstream-test-utils-patricia 11 - Insert into Patricia Tree v6: 2001:500:88:beef::/64
+ok     12 - Patricia Tree v4 search exact
+PASS: bgpstream-test-utils-patricia 12 - Patricia Tree v4 search exact
+ok     13 - Patricia Tree v6 search exact
+PASS: bgpstream-test-utils-patricia 13 - Patricia Tree v6 search exact
+ok     14 - Patricia Tree v4 overlap info
+PASS: bgpstream-test-utils-patricia 14 - Patricia Tree v4 overlap info
+ok     15 - Patricia Tree v6 overlap info
+PASS: bgpstream-test-utils-patricia 15 - Patricia Tree v6 overlap info
+ok     16 - Patricia Tree v4 minimum coverage
+PASS: bgpstream-test-utils-patricia 16 - Patricia Tree v4 minimum coverage
+ok     17 - Patricia Tree v6 minimum coverage
+PASS: bgpstream-test-utils-patricia 17 - Patricia Tree v6 minimum coverage
+ok     18 - Patricia Tree v4 /24 subnets
+PASS: bgpstream-test-utils-patricia 18 - Patricia Tree v4 /24 subnets
+ok     19 - Patricia Tree v6 /64 subnets
+PASS: bgpstream-test-utils-patricia 19 - Patricia Tree v6 /64 subnets
+ok     20 - Patricia Tree v4 less specific
+PASS: bgpstream-test-utils-patricia 20 - Patricia Tree v4 less specific
+ok     21 - Patricia Tree v4 min covering pfx
+PASS: bgpstream-test-utils-patricia 21 - Patricia Tree v4 min covering pfx
+ok     22 - Insert into Patricia Tree v4: 1.0.0.0/24
+PASS: bgpstream-test-utils-patricia 22 - Insert into Patricia Tree v4: 1.0.0.0/24
+ok     23 - Insert into Patricia Tree v4: 1.0.4.0/22
+PASS: bgpstream-test-utils-patricia 23 - Insert into Patricia Tree v4: 1.0.4.0/22
+ok     24 - Insert into Patricia Tree v4: 1.0.64.0/18
+PASS: bgpstream-test-utils-patricia 24 - Insert into Patricia Tree v4: 1.0.64.0/18
+ok     25 - Insert into Patricia Tree v4: 1.0.128.0/24
+PASS: bgpstream-test-utils-patricia 25 - Insert into Patricia Tree v4: 1.0.128.0/24
+ok     26 - Insert into Patricia Tree v4: 1.0.129.0/24
+PASS: bgpstream-test-utils-patricia 26 - Insert into Patricia Tree v4: 1.0.129.0/24
+ok     27 - Insert into Patricia Tree v4: 1.0.132.0/22
+PASS: bgpstream-test-utils-patricia 27 - Insert into Patricia Tree v4: 1.0.132.0/22
+ok     28 - Insert into Patricia Tree v4: 2.158.48.15/21
+PASS: bgpstream-test-utils-patricia 28 - Insert into Patricia Tree v4: 2.158.48.15/21
+ok     29 - Insert into Patricia Tree v4: 2.158.57.0/24
+PASS: bgpstream-test-utils-patricia 29 - Insert into Patricia Tree v4: 2.158.57.0/24
+ok     30 - Insert into Patricia Tree v4: 2.158.48.0/20
+PASS: bgpstream-test-utils-patricia 30 - Insert into Patricia Tree v4: 2.158.48.0/20
+# Section Patricia Tree: PASS
+1..30

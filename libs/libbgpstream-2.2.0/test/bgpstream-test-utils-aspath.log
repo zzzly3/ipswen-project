@@ -1,0 +1,55 @@
+ok     1 - as_path create
+PASS: bgpstream-test-utils-aspath 1 - as_path create
+ok     2 - as_path append segment
+PASS: bgpstream-test-utils-aspath 2 - as_path append segment
+ok     3 - as_path unequal/copy/equal
+PASS: bgpstream-test-utils-aspath 3 - as_path unequal/copy/equal
+ok     4 - as_path get_origin_seg
+PASS: bgpstream-test-utils-aspath 4 - as_path get_origin_seg
+ok     5 - as_path origin asn
+PASS: bgpstream-test-utils-aspath 5 - as_path origin asn
+ok     6 - as_path print
+PASS: bgpstream-test-utils-aspath 6 - as_path print
+ok     7 - as_path append segment
+PASS: bgpstream-test-utils-aspath 7 - as_path append segment
+ok     8 - as_path unequal/copy/equal
+PASS: bgpstream-test-utils-aspath 8 - as_path unequal/copy/equal
+ok     9 - as_path get_origin_seg
+PASS: bgpstream-test-utils-aspath 9 - as_path get_origin_seg
+ok     10 - as_path origin set
+PASS: bgpstream-test-utils-aspath 10 - as_path origin set
+ok     11 - as_path print
+PASS: bgpstream-test-utils-aspath 11 - as_path print
+ok     12 - as_path append segment
+PASS: bgpstream-test-utils-aspath 12 - as_path append segment
+ok     13 - as_path unequal/copy/equal
+PASS: bgpstream-test-utils-aspath 13 - as_path unequal/copy/equal
+ok     14 - as_path get_origin_seg
+PASS: bgpstream-test-utils-aspath 14 - as_path get_origin_seg
+ok     15 - as_path origin set
+PASS: bgpstream-test-utils-aspath 15 - as_path origin set
+ok     16 - as_path print
+PASS: bgpstream-test-utils-aspath 16 - as_path print
+ok     17 - as_path append segment
+PASS: bgpstream-test-utils-aspath 17 - as_path append segment
+ok     18 - as_path unequal/copy/equal
+PASS: bgpstream-test-utils-aspath 18 - as_path unequal/copy/equal
+ok     19 - as_path get_origin_seg
+PASS: bgpstream-test-utils-aspath 19 - as_path get_origin_seg
+ok     20 - as_path origin set
+PASS: bgpstream-test-utils-aspath 20 - as_path origin set
+ok     21 - as_path print
+PASS: bgpstream-test-utils-aspath 21 - as_path print
+ok     22 - as_path append segment
+PASS: bgpstream-test-utils-aspath 22 - as_path append segment
+ok     23 - as_path unequal/copy/equal
+PASS: bgpstream-test-utils-aspath 23 - as_path unequal/copy/equal
+ok     24 - as_path get_origin_seg
+PASS: bgpstream-test-utils-aspath 24 - as_path get_origin_seg
+ok     25 - as_path origin set
+PASS: bgpstream-test-utils-aspath 25 - as_path origin set
+ok     26 - as_path print
+PASS: bgpstream-test-utils-aspath 26 - as_path print
+ok     27 - as_path len
+PASS: bgpstream-test-utils-aspath 27 - as_path len
+1..27

@@ -1,0 +1,138 @@
+#!/usr/bin/bash
+#if 0
+set -e
+tmp="/tmp/user_send_route"
+CC=${CC:-xcc}
+if [ ! -e $tmp ] || [ $tmp -ot $0 ]; then
+	tail -n +2 $0 | $CC -x c -o $tmp -
+fi
+sudo $tmp
+exit $?
+#endif
+
+#include <stdio.h>
+#include <sys/errno.h>
+#include <sys/time.h>
+#include <sys/socket.h>
+#include <asm/types.h>
+#include <sys/types.h>
+#include <linux/rtnetlink.h>
+#include <linux/netlink.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/uio.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <stdlib.h>
+
+static uint64_t Key_ext2u64(struct ipswen_addr *key)
+{
+	uint64_t x = 0;
+	///int i = 0;
+	//x = key->ext.level + 7;
+	//for (i = 0; i < 7; ++i)
+	//	x = x * 256 + key->ext.addr[i];
+	x = *(uint64_t *)&key->ext;
+	return x;
+}
+
+
+int addattr_l(struct nlmsghdr *n, int maxlen, int type, void *data, int alen)
+{
+	int len = RTA_LENGTH(alen);
+	struct rtattr *rta;
+	if (NLMSG_ALIGN(n->nlmsg_len) + len > maxlen)
+		return -1;
+	rta = (struct rtattr*)(((char*)n) + NLMSG_ALIGN(n->nlmsg_len));
+	rta->rta_type = type;
+	rta->rta_len = len;
+	memcpy(RTA_DATA(rta), data, alen);
+	n->nlmsg_len = NLMSG_ALIGN(n->nlmsg_len) + len;
+	fprintf(stderr, "\nattrlen=%d\n", n->nlmsg_len);
+	return 0;
+}
+
+
+void route_add(int fd, struct ipswen_addr* destination, struct ipswen_addr* gateway, unsigned int netmask)
+{
+	struct sockaddr_nl nladdr;
+	int status;
+
+	uint32_t index = 2;
+
+	struct
+	{
+		struct nlmsghdr n;
+		struct rtmsg r;
+		char buf[1024];
+	} req;
+	nladdr.nl_family = AF_NETLINK;
+	nladdr.nl_pad = 0;
+	nladdr.nl_pid = 0;
+	nladdr.nl_groups = 0;
+	status = bind(fd, (struct sockaddr*)&nladdr, sizeof(nladdr));
+	if (status < 0) {
+		perror("bind");
+		exit(1);
+	}
+
+	memset(&req, 0, sizeof(req));
+
+	req.n.nlmsg_len = NLMSG_LENGTH(sizeof(struct rtmsg));
+	req.n.nlmsg_flags = NLM_F_REQUEST | NLM_F_ACK | NLM_F_CREATE | NLM_F_EXCL;
+	req.n.nlmsg_type = RTM_NEWROUTE;
+
+	req.r.rtm_family = AF_INET;
+	req.r.rtm_table = RT_TABLE_MAIN;
+	req.r.rtm_protocol = RTPROT_STATIC;
+	req.r.rtm_scope = RT_SCOPE_UNIVERSE;
+	req.r.rtm_type = RTN_UNICAST;
+	req.r.rtm_dst_len = netmask;  //Ŀ��������������λ��
+	req.r.rtm_src_len = 0;
+	req.r.rtm_tos = 0;
+
+
+	req.n.nlmsg_len = NLMSG_LENGTH(sizeof(struct rtmsg));
+
+	addattr_l(&req.n, sizeof(req), RTA_DST, &destination->base, 4);
+	addattr_l(&req.n, sizeof(req), RTA_GATEWAY, &gateway->base, 4);
+	addattr_l(&req.n, sizeof(req), RTA_OIF, &index, 4);
+
+	uint64_t x = Key_ext2u64(destination);
+	uint64_t y = Key_ext2u64(gateway);
+	addattr_l(&req.n, sizeof(req), RTA_DST_EXT, &x, 8);
+	addattr_l(&req.n, sizeof(req), RTA_GATEWAY_EXT, &y, 8);
+
+
+	status = send(fd, &req, req.n.nlmsg_len, 0);
+	fprintf(stderr, "\nstatus=%d, success\n", status);
+
+}
+
+int main(int argc, char ** argv)
+{
+	int fd;
+	struct ipswen_addr dest, gate;
+
+	if ((fd = socket(AF_NETLINK, SOCK_RAW, NETLINK_ROUTE)) < 0) {
+		printf("error creating a socket\n");
+		exit(1);
+	}
+
+	memset(&dest, 0, sizeof(struct ipswen_addr));
+	dest.bytes[0] = 197;
+	dest.bytes[1] = 49;
+	dest.bytes[2] = 253;
+	dest.bytes[3] = 0;
+	// dest.bytes[4] = 128;
+	// dest.ext.level = 1;
+
+	memset(&gate, 0, sizeof(struct ipswen_addr));
+	gate.bytes[0] = 192;
+	gate.bytes[1] = 168;
+	gate.bytes[2] = 1;
+	gate.bytes[3] = 131;
+
+	route_add(fd, &dest, &gate, 24);
+	return 0;
+}

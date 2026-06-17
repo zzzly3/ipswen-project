@@ -1,0 +1,9 @@
+# ninja log v5
+1	117	1709646745457915356	CMakeFiles/cmrtdb.dir/rbtree.c.o	4c6bf901befdc2f4
+0	187	1709646745529919259	CMakeFiles/cmrtdb.dir/cmrtdb.c.o	4cc2402bc2aa65ae
+4	250	1709646745589922511	CMakeFiles/cmrtdb.dir/mrtdb_query.c.o	4589b5d8e2a9d0b5
+2	299	1709646745641925330	CMakeFiles/cmrtdb.dir/mrtdb_format.c.o	9a05376330f67b42
+3	305	1709646745645925547	CMakeFiles/cmrtdb.dir/mrtdb_load.c.o	1a12a0887376dc05
+2	338	1709646745677927281	CMakeFiles/cmrtdb.dir/mrtdb_index.c.o	c97334f4380b791c
+3	479	1709646745821935087	CMakeFiles/cmrtdb.dir/cJSON.c.o	7246dd538281f1fc
+479	520	1709646745861937255	libcmrtdb.so	6faac80f63a8fb4a

@@ -1,0 +1,105 @@
+=============================================
+   libbgpstream 2.2.0: test/test-suite.log
+=============================================
+
+# TOTAL: 212
+# PASS:  209
+# SKIP:  3
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+
+.. contents:: :depth: 2
+
+PASS: bgpstream-test
+====================
+
+# Checking section: BGPStream...
+ok     1 - BGPStream create
+PASS: bgpstream-test 1 - BGPStream create
+# Section BGPStream: PASS
+# Checking section: singlefile data interface...
+ok     2 - get data interface ID (singlefile)
+PASS: bgpstream-test 2 - get data interface ID (singlefile)
+ok     3 - get option (rib-file)
+PASS: bgpstream-test 3 - get option (rib-file)
+ok     4 - set option (rib-file)
+PASS: bgpstream-test 4 - set option (rib-file)
+ok     5 - get option (upd-file)
+PASS: bgpstream-test 5 - get option (upd-file)
+ok     6 - set option (upd-file)
+PASS: bgpstream-test 6 - set option (upd-file)
+ok     7 - stream start (singlefile)
+PASS: bgpstream-test 7 - stream start (singlefile)
+ok     8 - final return code (singlefile)
+PASS: bgpstream-test 8 - final return code (singlefile)
+ok     9 - read records (singlefile)
+PASS: bgpstream-test 9 - read records (singlefile)
+# Section singlefile data interface: PASS
+# Checking section: csvfile data interface...
+ok     10 - get data interface ID (csvfile)
+PASS: bgpstream-test 10 - get data interface ID (csvfile)
+ok     11 - get option (csv-file)
+PASS: bgpstream-test 11 - get option (csv-file)
+ok     12 - stream start (csvfile)
+PASS: bgpstream-test 12 - stream start (csvfile)
+ok     13 - final return code (csvfile)
+PASS: bgpstream-test 13 - final return code (csvfile)
+ok     14 - read records (csvfile)
+PASS: bgpstream-test 14 - read records (csvfile)
+# Section csvfile data interface: PASS
+ok     15 # SKIP section: sqlite data interface
+SKIP: bgpstream-test 15 # SKIP section: sqlite data interface
+# Checking section: broker data interface...
+ok     16 - get data interface ID (broker)
+PASS: bgpstream-test 16 - get data interface ID (broker)
+ok     17 - HTTP connectivity to broker
+PASS: bgpstream-test 17 - HTTP connectivity to broker
+ok     18 - stream start (broker)
+PASS: bgpstream-test 18 - stream start (broker)
+ok     19 - final return code (broker)
+PASS: bgpstream-test 19 - final return code (broker)
+ok     20 - read records (broker)
+PASS: bgpstream-test 20 - read records (broker)
+# Section broker data interface: PASS
+1..20
+
+SKIP: bgpstream-test-rislive
+============================
+
+checking entry 0
+VALID: U|A|1553627987.890000|singlefile|rrc00|||11708|72.22.223.9|45.161.192.0/23|72.22.223.9|11708 32097 1299 52320 263009 263009 263009 263009 263009 52993 268481 268481|268481|||
+correctly valid record 0
+
+2024-03-13 00:54:14 3872402: bs_format_rislive.c:436: WARNING: RIS-Live error message: 'this is a test error message'
+checking entry 1
+VALID: U|S|1553625081.880000|singlefile|rrc01|||24931|195.66.224.59|||||||IDLE
+correctly valid record 1
+
+checking entry 2
+correctly valid record 2
+
+checking entry 3
+correctly unsupported record 3
+
+checking entry 4
+correctly unsupported record 4
+
+2024-03-13 00:54:14 3872402: bs_format_rislive.c:394: ERROR: RIS Live: JSON parser returned -3
+2024-03-13 00:54:14 3872402: bs_format_rislive.c:310: WARNING: Corrupted RIS Live message: {"type": "ris_message", "data": {"timestamp": 1553625034.06, "peer": "80.249.210.89", "peer_asn": "31042", "id": "80.249.210.89-1553625034.06-3003976", "raw": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF001304", "host": "rrc03", "type": "KEEPALIVE"}
+checking entry 5
+correctly unsupported record 5
+
+checking entry 6
+correctly corrupted record 6
+1..0
+SKIP: bgpstream-test-rislive
+
+SKIP: bgpstream-test-rpki
+=========================
+
+ok     1 # SKIP section: RPKI
+SKIP: bgpstream-test-rpki 1 # SKIP section: RPKI
+1..1
+

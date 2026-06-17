@@ -1,0 +1,47 @@
+name: Packaging for Debian and Ubuntu
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+     runs-on: ubuntu-latest
+     container:
+       image: ${{ matrix.target }}
+     strategy:
+       fail-fast: false
+       matrix:
+         arch:
+           - amd64
+         target:
+           - "debian:buster"
+           - "debian:bullseye"
+           - "ubuntu:jammy"
+           - "ubuntu:bionic"
+           - "ubuntu:focal"
+
+     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Install prereq packages
+        run: ./debpkg-setup.sh
+      - name: Build packages
+        run: ./debpkg-build.sh
+      - name: Store packages
+        run: |
+          export DIRNAME=`echo ${{ matrix.target }} | tr ':' '_'`
+          mkdir -p packages/${DIRNAME}
+          cp ../*.deb packages/${DIRNAME}/
+      - name: Run tests
+        run: |
+          export DIRNAME=`echo ${{ matrix.target }} | tr ':' '_'`
+          ./run-tests.sh ${DIRNAME}
+      - name: Publish packages to cloudsmith
+        uses: wandnz/action-cloudsmith-upload-packages@v1.6
+        with:
+          path: packages/
+          repo: ${{ secrets.CLOUDSMITH_OWNER }}/libwandio
+          username: salcock
+          api_key: ${{ secrets.CLOUDSMITH_API_KEY }}

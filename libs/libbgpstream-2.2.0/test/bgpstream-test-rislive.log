@@ -1,0 +1,27 @@
+checking entry 0
+VALID: U|A|1553627987.890000|singlefile|rrc00|||11708|72.22.223.9|45.161.192.0/23|72.22.223.9|11708 32097 1299 52320 263009 263009 263009 263009 263009 52993 268481 268481|268481|||
+correctly valid record 0
+
+2024-03-13 00:54:14 3872402: bs_format_rislive.c:436: WARNING: RIS-Live error message: 'this is a test error message'
+checking entry 1
+VALID: U|S|1553625081.880000|singlefile|rrc01|||24931|195.66.224.59|||||||IDLE
+correctly valid record 1
+
+checking entry 2
+correctly valid record 2
+
+checking entry 3
+correctly unsupported record 3
+
+checking entry 4
+correctly unsupported record 4
+
+2024-03-13 00:54:14 3872402: bs_format_rislive.c:394: ERROR: RIS Live: JSON parser returned -3
+2024-03-13 00:54:14 3872402: bs_format_rislive.c:310: WARNING: Corrupted RIS Live message: {"type": "ris_message", "data": {"timestamp": 1553625034.06, "peer": "80.249.210.89", "peer_asn": "31042", "id": "80.249.210.89-1553625034.06-3003976", "raw": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF001304", "host": "rrc03", "type": "KEEPALIVE"}
+checking entry 5
+correctly unsupported record 5
+
+checking entry 6
+correctly corrupted record 6
+1..0
+SKIP: bgpstream-test-rislive

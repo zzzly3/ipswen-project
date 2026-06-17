@@ -1,0 +1,75 @@
+ok     1 - get data interface ID (broker)
+PASS: bgpstream-test-filters 1 - get data interface ID (broker)
+ok     2 - stream start (interface)
+PASS: bgpstream-test-filters 2 - stream start (interface)
+ok     3 - elem partial count
+PASS: bgpstream-test-filters 3 - elem partial count
+ok     4 - elem equality
+PASS: bgpstream-test-filters 4 - elem equality
+ok     5 - elem partial count
+PASS: bgpstream-test-filters 5 - elem partial count
+ok     6 - elem equality
+PASS: bgpstream-test-filters 6 - elem equality
+ok     7 - elem partial count
+PASS: bgpstream-test-filters 7 - elem partial count
+ok     8 - elem equality
+PASS: bgpstream-test-filters 8 - elem equality
+ok     9 - elem partial count
+PASS: bgpstream-test-filters 9 - elem partial count
+ok     10 - elem equality
+PASS: bgpstream-test-filters 10 - elem equality
+ok     11 - elem partial count
+PASS: bgpstream-test-filters 11 - elem partial count
+ok     12 - elem equality
+PASS: bgpstream-test-filters 12 - elem equality
+ok     13 - elem partial count
+PASS: bgpstream-test-filters 13 - elem partial count
+ok     14 - elem equality
+PASS: bgpstream-test-filters 14 - elem equality
+ok     15 - elem partial count
+PASS: bgpstream-test-filters 15 - elem partial count
+ok     16 - elem equality
+PASS: bgpstream-test-filters 16 - elem equality
+ok     17 - mangled elem equality
+PASS: bgpstream-test-filters 17 - mangled elem equality
+ok     18 - elem total count
+PASS: bgpstream-test-filters 18 - elem total count
+ok     19 - get data interface ID (broker)
+PASS: bgpstream-test-filters 19 - get data interface ID (broker)
+ok     20 - filter string
+PASS: bgpstream-test-filters 20 - filter string
+ok     21 - stream start (interface)
+PASS: bgpstream-test-filters 21 - stream start (interface)
+ok     22 - elem partial count
+PASS: bgpstream-test-filters 22 - elem partial count
+ok     23 - elem equality
+PASS: bgpstream-test-filters 23 - elem equality
+ok     24 - elem partial count
+PASS: bgpstream-test-filters 24 - elem partial count
+ok     25 - elem equality
+PASS: bgpstream-test-filters 25 - elem equality
+ok     26 - elem partial count
+PASS: bgpstream-test-filters 26 - elem partial count
+ok     27 - elem equality
+PASS: bgpstream-test-filters 27 - elem equality
+ok     28 - elem partial count
+PASS: bgpstream-test-filters 28 - elem partial count
+ok     29 - elem equality
+PASS: bgpstream-test-filters 29 - elem equality
+ok     30 - elem partial count
+PASS: bgpstream-test-filters 30 - elem partial count
+ok     31 - elem equality
+PASS: bgpstream-test-filters 31 - elem equality
+ok     32 - elem partial count
+PASS: bgpstream-test-filters 32 - elem partial count
+ok     33 - elem equality
+PASS: bgpstream-test-filters 33 - elem equality
+ok     34 - elem partial count
+PASS: bgpstream-test-filters 34 - elem partial count
+ok     35 - elem equality
+PASS: bgpstream-test-filters 35 - elem equality
+ok     36 - mangled elem equality
+PASS: bgpstream-test-filters 36 - mangled elem equality
+ok     37 - elem total count
+PASS: bgpstream-test-filters 37 - elem total count
+1..37

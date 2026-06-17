@@ -1,0 +1,1114 @@
+In file included from ./nest/bird.h:14,
+                 from conf/confbase.Y:13:
+./lib/ip.h:83:22: error: field ‘addr’ has incomplete type
+   83 |   struct ipswen_addr addr;
+      |                      ^~~~
+./lib/ip.h: In function ‘ip4_is_unicast’:
+./lib/ip.h:363:43: warning: parameter ‘a’ set but not used [-Wunused-but-set-parameter]
+  363 | static inline int ip4_is_unicast(ip4_addr a)
+      |                                  ~~~~~~~~~^
+./lib/ip.h: In function ‘ip4_getbit’:
+./lib/ip.h:473:39: warning: parameter ‘a’ set but not used [-Wunused-but-set-parameter]
+  473 | static inline u32 ip4_getbit(ip4_addr a, uint pos)
+      |                              ~~~~~~~~~^
+./lib/ip.h: In function ‘ip4_getbits’:
+./lib/ip.h:476:40: warning: parameter ‘a’ set but not used [-Wunused-but-set-parameter]
+  476 | static inline u32 ip4_getbits(ip4_addr a, uint pos, uint n)
+      |                               ~~~~~~~~~^
+In file included from ./nest/bird.h:14,
+                 from conf/confbase.Y:13:
+./lib/ip.h: In function ‘ip4_hton’:
+./lib/ip.h:550:43: error: ‘struct ipswen_addr’ has no member named ‘base’
+  550 | { return (ip4_addr)((struct ipswen_addr){.base = htonl(a.addr.base), .ext = a.addr.ext}); }
+      |                                           ^~~~
+./lib/ip.h:550:50: warning: excess elements in struct initializer
+  550 | { return (ip4_addr)((struct ipswen_addr){.base = htonl(a.addr.base), .ext = a.addr.ext}); }
+      |                                                  ^~~~~
+./lib/ip.h:550:50: note: (near initialization for ‘(anonymous)’)
+./lib/ip.h:550:71: error: ‘struct ipswen_addr’ has no member named ‘ext’
+  550 | { return (ip4_addr)((struct ipswen_addr){.base = htonl(a.addr.base), .ext = a.addr.ext}); }
+      |                                                                       ^~~
+./lib/ip.h:550:77: warning: excess elements in struct initializer
+  550 | { return (ip4_addr)((struct ipswen_addr){.base = htonl(a.addr.base), .ext = a.addr.ext}); }
+      |                                                                             ^
+./lib/ip.h:550:77: note: (near initialization for ‘(anonymous)’)
+./lib/ip.h:550:41: error: invalid use of undefined type ‘struct ipswen_addr’
+  550 | { return (ip4_addr)((struct ipswen_addr){.base = htonl(a.addr.base), .ext = a.addr.ext}); }
+      |                                         ^
+./lib/ip.h:549:42: warning: parameter ‘a’ set but not used [-Wunused-but-set-parameter]
+  549 | static inline ip4_addr ip4_hton(ip4_addr a)
+      |                                 ~~~~~~~~~^
+./lib/ip.h: In function ‘ip4_ntoh’:
+./lib/ip.h:553:43: error: ‘struct ipswen_addr’ has no member named ‘base’
+  553 | { return (ip4_addr)((struct ipswen_addr){.base = ntohl(a.addr.base), .ext = a.addr.ext}); }
+      |                                           ^~~~
+./lib/ip.h:553:50: warning: excess elements in struct initializer
+  553 | { return (ip4_addr)((struct ipswen_addr){.base = ntohl(a.addr.base), .ext = a.addr.ext}); }
+      |                                                  ^~~~~
+./lib/ip.h:553:50: note: (near initialization for ‘(anonymous)’)
+./lib/ip.h:553:71: error: ‘struct ipswen_addr’ has no member named ‘ext’
+  553 | { return (ip4_addr)((struct ipswen_addr){.base = ntohl(a.addr.base), .ext = a.addr.ext}); }
+      |                                                                       ^~~
+./lib/ip.h:553:77: warning: excess elements in struct initializer
+  553 | { return (ip4_addr)((struct ipswen_addr){.base = ntohl(a.addr.base), .ext = a.addr.ext}); }
+      |                                                                             ^
+./lib/ip.h:553:77: note: (near initialization for ‘(anonymous)’)
+./lib/ip.h:553:41: error: invalid use of undefined type ‘struct ipswen_addr’
+  553 | { return (ip4_addr)((struct ipswen_addr){.base = ntohl(a.addr.base), .ext = a.addr.ext}); }
+      |                                         ^
+./lib/ip.h:552:42: warning: parameter ‘a’ set but not used [-Wunused-but-set-parameter]
+  552 | static inline ip4_addr ip4_ntoh(ip4_addr a)
+      |                                 ~~~~~~~~~^
+In file included from ./nest/bird.h:14,
+                 from conf/confbase.Y:13:
+./lib/ip.h: In function ‘get_ip4’:
+./lib/ip.h:96:52: error: ‘struct ipswen_addr’ has no member named ‘base’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                    ^~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:605:10: note: in expansion of macro ‘_MI4’
+  605 |   return _MI4(get_u32(buf));
+      |          ^~~~
+./lib/ip.h:96:59: warning: excess elements in struct initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                           ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:605:10: note: in expansion of macro ‘_MI4’
+  605 |   return _MI4(get_u32(buf));
+      |          ^~~~
+./lib/ip.h:96:59: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                           ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:605:10: note: in expansion of macro ‘_MI4’
+  605 |   return _MI4(get_u32(buf));
+      |          ^~~~
+./lib/ip.h:96:65: error: ‘struct ipswen_addr’ has no member named ‘ext’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                 ^~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:605:10: note: in expansion of macro ‘_MI4’
+  605 |   return _MI4(get_u32(buf));
+      |          ^~~~
+./lib/ip.h:96:71: error: extra brace group at end of initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:605:10: note: in expansion of macro ‘_MI4’
+  605 |   return _MI4(get_u32(buf));
+      |          ^~~~
+./lib/ip.h:96:71: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:605:10: note: in expansion of macro ‘_MI4’
+  605 |   return _MI4(get_u32(buf));
+      |          ^~~~
+./lib/ip.h:96:71: warning: excess elements in struct initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:605:10: note: in expansion of macro ‘_MI4’
+  605 |   return _MI4(get_u32(buf));
+      |          ^~~~
+./lib/ip.h:96:71: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:605:10: note: in expansion of macro ‘_MI4’
+  605 |   return _MI4(get_u32(buf));
+      |          ^~~~
+./lib/ip.h:96:49: error: invalid use of undefined type ‘struct ipswen_addr’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                 ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:605:10: note: in expansion of macro ‘_MI4’
+  605 |   return _MI4(get_u32(buf));
+      |          ^~~~
+In file included from ./nest/bird.h:14,
+                 from conf/confbase.Y:13:
+./lib/ip.h: In function ‘put_ip4’:
+./lib/ip.h:615:50: warning: parameter ‘a’ set but not used [-Wunused-but-set-parameter]
+  615 | static inline void * put_ip4(void *buf, ip4_addr a)
+      |                                         ~~~~~~~~~^
+In file included from ./nest/bird.h:14,
+                 from conf/confbase.Y:13:
+./proto/ospf/ospf.h: In function ‘ospf3_6to4’:
+./lib/ip.h:96:52: error: ‘struct ipswen_addr’ has no member named ‘base’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                    ^~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./proto/ospf/ospf.h:848:10: note: in expansion of macro ‘_MI4’
+  848 | { return _MI4(_I0(a)); }
+      |          ^~~~
+./lib/ip.h:96:59: warning: excess elements in struct initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                           ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./proto/ospf/ospf.h:848:10: note: in expansion of macro ‘_MI4’
+  848 | { return _MI4(_I0(a)); }
+      |          ^~~~
+./lib/ip.h:96:59: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                           ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./proto/ospf/ospf.h:848:10: note: in expansion of macro ‘_MI4’
+  848 | { return _MI4(_I0(a)); }
+      |          ^~~~
+./lib/ip.h:96:65: error: ‘struct ipswen_addr’ has no member named ‘ext’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                 ^~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./proto/ospf/ospf.h:848:10: note: in expansion of macro ‘_MI4’
+  848 | { return _MI4(_I0(a)); }
+      |          ^~~~
+./lib/ip.h:96:71: error: extra brace group at end of initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./proto/ospf/ospf.h:848:10: note: in expansion of macro ‘_MI4’
+  848 | { return _MI4(_I0(a)); }
+      |          ^~~~
+./lib/ip.h:96:71: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./proto/ospf/ospf.h:848:10: note: in expansion of macro ‘_MI4’
+  848 | { return _MI4(_I0(a)); }
+      |          ^~~~
+./lib/ip.h:96:71: warning: excess elements in struct initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./proto/ospf/ospf.h:848:10: note: in expansion of macro ‘_MI4’
+  848 | { return _MI4(_I0(a)); }
+      |          ^~~~
+./lib/ip.h:96:71: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./proto/ospf/ospf.h:848:10: note: in expansion of macro ‘_MI4’
+  848 | { return _MI4(_I0(a)); }
+      |          ^~~~
+./lib/ip.h:96:49: error: invalid use of undefined type ‘struct ipswen_addr’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                 ^
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./proto/ospf/ospf.h:848:10: note: in expansion of macro ‘_MI4’
+  848 | { return _MI4(_I0(a)); }
+      |          ^~~~
+In file included from proto/ospf/config.Y:11:
+./proto/ospf/ospf.h: In function ‘ospf3_4to6’:
+./proto/ospf/ospf.h:850:44: warning: parameter ‘a’ set but not used [-Wunused-but-set-parameter]
+  850 | static inline ip6_addr ospf3_4to6(ip4_addr a)
+      |                                   ~~~~~~~~~^
+In file included from ./nest/bird.h:14,
+                 from conf/confbase.Y:13:
+./sysdep/unix/unix.h: In function ‘ipa_from_in4’:
+./lib/ip.h:96:52: error: ‘struct ipswen_addr’ has no member named ‘base’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                    ^~~~
+./lib/ip.h:125:48: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                ^
+./lib/ip.h:146:41: note: in expansion of macro ‘_IS1’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:59: warning: excess elements in struct initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                           ^
+./lib/ip.h:125:48: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                ^
+./lib/ip.h:146:41: note: in expansion of macro ‘_IS1’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:59: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                           ^
+./lib/ip.h:125:48: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                ^
+./lib/ip.h:146:41: note: in expansion of macro ‘_IS1’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:65: error: ‘struct ipswen_addr’ has no member named ‘ext’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                 ^~~
+./lib/ip.h:125:48: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                ^
+./lib/ip.h:146:41: note: in expansion of macro ‘_IS1’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: error: extra brace group at end of initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:48: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                ^
+./lib/ip.h:146:41: note: in expansion of macro ‘_IS1’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:48: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                ^
+./lib/ip.h:146:41: note: in expansion of macro ‘_IS1’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: warning: excess elements in struct initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:48: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                ^
+./lib/ip.h:146:41: note: in expansion of macro ‘_IS1’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:48: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                ^
+./lib/ip.h:146:41: note: in expansion of macro ‘_IS1’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:49: error: invalid use of undefined type ‘struct ipswen_addr’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                 ^
+./lib/ip.h:125:48: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                ^
+./lib/ip.h:146:41: note: in expansion of macro ‘_IS1’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:52: error: ‘struct ipswen_addr’ has no member named ‘base’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                    ^~~~
+./lib/ip.h:125:51: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                   ^
+./lib/ip.h:146:49: note: in expansion of macro ‘_IS2’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                 ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:59: warning: excess elements in struct initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                           ^
+./lib/ip.h:125:51: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                   ^
+./lib/ip.h:146:49: note: in expansion of macro ‘_IS2’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                 ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:59: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                           ^
+./lib/ip.h:125:51: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                   ^
+./lib/ip.h:146:49: note: in expansion of macro ‘_IS2’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                 ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:65: error: ‘struct ipswen_addr’ has no member named ‘ext’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                 ^~~
+./lib/ip.h:125:51: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                   ^
+./lib/ip.h:146:49: note: in expansion of macro ‘_IS2’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                 ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: error: extra brace group at end of initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:51: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                   ^
+./lib/ip.h:146:49: note: in expansion of macro ‘_IS2’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                 ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:51: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                   ^
+./lib/ip.h:146:49: note: in expansion of macro ‘_IS2’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                 ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: warning: excess elements in struct initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:51: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                   ^
+./lib/ip.h:146:49: note: in expansion of macro ‘_IS2’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                 ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:51: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                   ^
+./lib/ip.h:146:49: note: in expansion of macro ‘_IS2’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                 ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:52: error: ‘struct ipswen_addr’ has no member named ‘base’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                    ^~~~
+./lib/ip.h:125:54: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                      ^
+./lib/ip.h:146:57: note: in expansion of macro ‘_IS0’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:59: warning: excess elements in struct initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                           ^
+./lib/ip.h:125:54: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                      ^
+./lib/ip.h:146:57: note: in expansion of macro ‘_IS0’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:59: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                           ^
+./lib/ip.h:125:54: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                      ^
+./lib/ip.h:146:57: note: in expansion of macro ‘_IS0’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:65: error: ‘struct ipswen_addr’ has no member named ‘ext’
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                 ^~~
+./lib/ip.h:125:54: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                      ^
+./lib/ip.h:146:57: note: in expansion of macro ‘_IS0’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: error: extra brace group at end of initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:54: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                      ^
+./lib/ip.h:146:57: note: in expansion of macro ‘_IS0’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:54: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                      ^
+./lib/ip.h:146:57: note: in expansion of macro ‘_IS0’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: warning: excess elements in struct initializer
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:54: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                      ^
+./lib/ip.h:146:57: note: in expansion of macro ‘_IS0’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+./lib/ip.h:96:71: note: (near initialization for ‘(anonymous)’)
+   96 | #define _MISWEN_IMPL_0(x) ((struct ipswen_addr) { .base = (x), .ext = { .level = 0 } })
+      |                                                                       ^
+./lib/ip.h:125:54: note: in definition of macro ‘_MI6’
+  125 | #define _MI6(a,b,c,d) ((struct ip6_addr) {{ a, b, c, d }})
+      |                                                      ^
+./lib/ip.h:146:57: note: in expansion of macro ‘_IS0’
+  146 | #define ipa_from_ip4(x) _MI6(0x000000ff,_IS1(x),_IS2(x),_IS0(x))
+      |                                                         ^~~~
+./lib/ip.h:148:25: note: in expansion of macro ‘ipa_from_ip4’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                         ^~~~~~~~~~~~
+./lib/ip.h:104:69: note: in expansion of macro ‘_MISWEN_IMPL_0’
+  104 | #define _MISWEN_SELECT_IMPL(_0, _1, _2, _3, _4, _5, _6, _7, N, ...) _MISWEN_IMPL_##N
+      |                                                                     ^~~~~~~~~~~~~
+./lib/ip.h:105:34: note: in expansion of macro ‘_MISWEN_SELECT_IMPL’
+  105 | #define _MISWEN(...) ((ip4_addr)(_MISWEN_SELECT_IMPL(__VA_ARGS__, 7, 6, 5, 4, 3, 2, 1, 0, 0)(__VA_ARGS__)))
+      |                                  ^~~~~~~~~~~~~~~~~~~
+./lib/ip.h:87:17: note: in expansion of macro ‘_MISWEN’
+   87 | #define _MI4(x) _MISWEN(x)
+      |                 ^~~~~~~
+./lib/ip.h:183:25: note: in expansion of macro ‘_MI4’
+  183 | #define ip4_from_u32(x) _MI4(x)
+      |                         ^~~~
+./lib/ip.h:148:38: note: in expansion of macro ‘ip4_from_u32’
+  148 | #define ipa_from_u32(x) ipa_from_ip4(ip4_from_u32(x))
+      |                                      ^~~~~~~~~~~~
+./sysdep/unix/unix.h:65:10: note: in expansion of macro ‘ipa_from_u32’
+   65 | { return ipa_from_u32(ntohl(a.s_addr)); }
+      |          ^~~~~~~~~~~~
+In file included from sysdep/unix/config.Y:11:
+./sysdep/unix/unix.h: In function ‘ip4_to_in4’:
+./sysdep/unix/unix.h:89:50: warning: parameter ‘a’ set but not used [-Wunused-but-set-parameter]
+   89 | static inline struct in_addr ip4_to_in4(ip4_addr a)
+      |                                         ~~~~~~~~~^
+In file included from ./nest/bird.h:15,
+                 from conf/confbase.Y:13:
+./lib/net.h: In function ‘net_validate_px4’:
+./lib/net.h:523:1: warning: control reaches end of non-void function [-Wreturn-type]
+  523 | }
+      | ^
+./lib/net.h:203: confused by earlier errors, bailing out
+make: *** [Makefile:117: obj/conf/cf-parse.tab.o] Error 1

@@ -1,0 +1,751 @@
+option,mode,repeat,ttl,answered,reply_src,reply_dst,reply_type,detail,sent_summary,reply_summary
+none,icmp,0,1,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+none,icmp,0,2,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+none,icmp,0,3,1,10.200.235.225,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 10.200.235.225 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+none,icmp,0,4,1,10.200.47.1,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 10.200.47.1 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror / Padding
+none,icmp,0,5,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+none,icmp,0,6,1,36.110.255.197,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 36.110.255.197 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+none,icmp,0,7,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+none,icmp,0,8,1,202.97.54.66,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.54.66 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+none,icmp,0,9,1,202.97.59.106,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.59.106 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror / Padding
+none,icmp,0,10,1,4.15.125.53,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 4.15.125.53 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+none,icmp,0,11,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+none,icmp,0,12,1,62.67.66.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 62.67.66.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+none,icmp,0,13,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+none,icmp,0,14,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+none,icmp,0,15,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+none,icmp,0,16,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+none,icmp,0,17,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,icmp,0,18,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,icmp,0,19,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,icmp,0,20,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,icmp,0,21,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,icmp,0,22,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,icmp,0,23,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+none,icmp,0,24,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,icmp,0,25,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+none,icmp,0,26,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,icmp,0,27,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,icmp,0,28,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,icmp,0,29,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,icmp,0,30,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+none,tcp80,0,1,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40001 > 43.131.31.97:http S,
+none,tcp80,0,2,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40002 > 43.131.31.97:http S,
+none,tcp80,0,3,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40003 > 43.131.31.97:http S,
+none,tcp80,0,4,1,10.200.46.101,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40004 > 43.131.31.97:http S,IP / ICMP 10.200.46.101 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+none,tcp80,0,5,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40005 > 43.131.31.97:http S,
+none,tcp80,0,6,1,36.110.245.213,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40006 > 43.131.31.97:http S,IP / ICMP 36.110.245.213 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+none,tcp80,0,7,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40007 > 43.131.31.97:http S,
+none,tcp80,0,8,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40008 > 43.131.31.97:http S,
+none,tcp80,0,9,1,202.97.59.106,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40009 > 43.131.31.97:http S,IP / ICMP 202.97.59.106 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+none,tcp80,0,10,1,4.15.125.53,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40010 > 43.131.31.97:http S,IP / ICMP 4.15.125.53 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+none,tcp80,0,11,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40011 > 43.131.31.97:http S,
+none,tcp80,0,12,1,62.67.66.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40012 > 43.131.31.97:http S,IP / ICMP 62.67.66.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+none,tcp80,0,13,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40013 > 43.131.31.97:http S,
+none,tcp80,0,14,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40014 > 43.131.31.97:http S,
+none,tcp80,0,15,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40015 > 43.131.31.97:http S,
+none,tcp80,0,16,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40016 > 43.131.31.97:http S,
+none,tcp80,0,17,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40017 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40017 RA
+none,tcp80,0,18,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40018 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40018 RA
+none,tcp80,0,19,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40019 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40019 RA
+none,tcp80,0,20,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40020 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40020 RA
+none,tcp80,0,21,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40021 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40021 RA
+none,tcp80,0,22,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40022 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40022 RA
+none,tcp80,0,23,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40023 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40023 RA
+none,tcp80,0,24,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40024 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40024 RA
+none,tcp80,0,25,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40025 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40025 RA
+none,tcp80,0,26,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40026 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40026 RA
+none,tcp80,0,27,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40027 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40027 RA
+none,tcp80,0,28,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40028 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40028 RA
+none,tcp80,0,29,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40029 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40029 RA
+none,tcp80,0,30,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40030 > 43.131.31.97:http S,IP / TCP 43.131.31.97:http > 172.21.16.8:40030 RA
+none,tcp443,0,1,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40001 > 43.131.31.97:https S,
+none,tcp443,0,2,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40002 > 43.131.31.97:https S,
+none,tcp443,0,3,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40003 > 43.131.31.97:https S,
+none,tcp443,0,4,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40004 > 43.131.31.97:https S,
+none,tcp443,0,5,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40005 > 43.131.31.97:https S,
+none,tcp443,0,6,1,36.110.255.197,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40006 > 43.131.31.97:https S,IP / ICMP 36.110.255.197 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+none,tcp443,0,7,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40007 > 43.131.31.97:https S,
+none,tcp443,0,8,1,202.97.12.62,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40008 > 43.131.31.97:https S,IP / ICMP 202.97.12.62 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+none,tcp443,0,9,1,202.97.59.106,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40009 > 43.131.31.97:https S,IP / ICMP 202.97.59.106 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+none,tcp443,0,10,1,4.15.125.53,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40010 > 43.131.31.97:https S,IP / ICMP 4.15.125.53 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+none,tcp443,0,11,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40011 > 43.131.31.97:https S,
+none,tcp443,0,12,1,62.67.66.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40012 > 43.131.31.97:https S,IP / ICMP 62.67.66.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+none,tcp443,0,13,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40013 > 43.131.31.97:https S,
+none,tcp443,0,14,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40014 > 43.131.31.97:https S,
+none,tcp443,0,15,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40015 > 43.131.31.97:https S,
+none,tcp443,0,16,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40016 > 43.131.31.97:https S,
+none,tcp443,0,17,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40017 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40017 RA
+none,tcp443,0,18,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40018 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40018 RA
+none,tcp443,0,19,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40019 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40019 RA
+none,tcp443,0,20,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40020 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40020 RA
+none,tcp443,0,21,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40021 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40021 RA
+none,tcp443,0,22,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40022 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40022 RA
+none,tcp443,0,23,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40023 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40023 RA
+none,tcp443,0,24,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40024 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40024 RA
+none,tcp443,0,25,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40025 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40025 RA
+none,tcp443,0,26,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40026 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40026 RA
+none,tcp443,0,27,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40027 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40027 RA
+none,tcp443,0,28,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40028 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40028 RA
+none,tcp443,0,29,1,43.131.31.97,172.21.16.8,tcp-rst,port closed or rejected,IP / TCP 172.21.16.8:40029 > 43.131.31.97:https S,IP / TCP 43.131.31.97:https > 172.21.16.8:40029 RA
+none,tcp443,0,30,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40030 > 43.131.31.97:https S,
+none,udp,0,1,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40001 > 43.131.31.97:33435,
+none,udp,0,2,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40002 > 43.131.31.97:33436,
+none,udp,0,3,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40003 > 43.131.31.97:33437,
+none,udp,0,4,1,10.200.46.93,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40004 > 43.131.31.97:33438,IP / ICMP 10.200.46.93 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror / Padding
+none,udp,0,5,1,36.110.203.205,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40005 > 43.131.31.97:33439,IP / ICMP 36.110.203.205 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+none,udp,0,6,1,36.110.243.89,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40006 > 43.131.31.97:33440,IP / ICMP 36.110.243.89 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+none,udp,0,7,1,202.97.34.78,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40007 > 43.131.31.97:33441,IP / ICMP 202.97.34.78 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+none,udp,0,8,1,202.97.12.142,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40008 > 43.131.31.97:33442,IP / ICMP 202.97.12.142 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+none,udp,0,9,1,202.97.51.193,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40009 > 43.131.31.97:33443,IP / ICMP 202.97.51.193 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror / Padding
+none,udp,0,10,1,4.15.125.53,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40010 > 43.131.31.97:33444,IP / ICMP 4.15.125.53 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+none,udp,0,11,1,171.75.9.179,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40011 > 43.131.31.97:33445,IP / ICMP 171.75.9.179 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+none,udp,0,12,1,62.67.66.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40012 > 43.131.31.97:33446,IP / ICMP 62.67.66.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+none,udp,0,13,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40013 > 43.131.31.97:33447,
+none,udp,0,14,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40014 > 43.131.31.97:33448,
+none,udp,0,15,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40015 > 43.131.31.97:33449,
+none,udp,0,16,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40016 > 43.131.31.97:33450,
+none,udp,0,17,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40017 > 43.131.31.97:33451,
+none,udp,0,18,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40018 > 43.131.31.97:33452,
+none,udp,0,19,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40019 > 43.131.31.97:33453,
+none,udp,0,20,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40020 > 43.131.31.97:33454,
+none,udp,0,21,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40021 > 43.131.31.97:33455,
+none,udp,0,22,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40022 > 43.131.31.97:33456,
+none,udp,0,23,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40023 > 43.131.31.97:33457,
+none,udp,0,24,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40024 > 43.131.31.97:33458,
+none,udp,0,25,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40025 > 43.131.31.97:33459,
+none,udp,0,26,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40026 > 43.131.31.97:33460,
+none,udp,0,27,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40027 > 43.131.31.97:33461,
+none,udp,0,28,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40028 > 43.131.31.97:33462,
+none,udp,0,29,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40029 > 43.131.31.97:33463,
+none,udp,0,30,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40030 > 43.131.31.97:33464,
+none,gre,0,1,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,2,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,3,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,4,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,5,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,6,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,7,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,8,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,9,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,10,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,11,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,12,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,13,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,14,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,15,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,16,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,17,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,18,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,19,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,20,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,21,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,22,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,23,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,24,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,25,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,26,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,27,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,28,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,29,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+none,gre,0,30,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,icmp,0,1,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,2,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,3,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,4,1,10.200.46.101,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 10.200.46.101 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror / Padding
+unkctl3,icmp,0,5,1,10.162.8.38,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 10.162.8.38 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkctl3,icmp,0,6,1,36.110.203.205,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 36.110.203.205 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkctl3,icmp,0,7,1,36.110.243.125,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 36.110.243.125 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkctl3,icmp,0,8,1,202.97.94.230,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.94.230 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror / Padding
+unkctl3,icmp,0,9,1,202.97.12.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.12.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkctl3,icmp,0,10,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,11,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,12,1,62.67.66.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 62.67.66.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkctl3,icmp,0,13,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,14,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,15,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,16,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,17,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,18,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,19,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,20,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,21,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,22,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,23,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,24,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,25,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,26,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,27,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,28,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,29,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,icmp,0,30,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl3,tcp80,0,1,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40001 > 43.131.31.97:http S,
+unkctl3,tcp80,0,2,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40002 > 43.131.31.97:http S,
+unkctl3,tcp80,0,3,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40003 > 43.131.31.97:http S,
+unkctl3,tcp80,0,4,1,10.200.46.97,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40004 > 43.131.31.97:http S,IP / ICMP 10.200.46.97 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkctl3,tcp80,0,5,1,10.162.8.38,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40005 > 43.131.31.97:http S,IP / ICMP 10.162.8.38 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkctl3,tcp80,0,6,1,36.110.203.205,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40006 > 43.131.31.97:http S,IP / ICMP 36.110.203.205 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkctl3,tcp80,0,7,1,36.110.243.125,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40007 > 43.131.31.97:http S,IP / ICMP 36.110.243.125 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkctl3,tcp80,0,8,1,202.97.94.230,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40008 > 43.131.31.97:http S,IP / ICMP 202.97.94.230 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkctl3,tcp80,0,9,1,202.97.12.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40009 > 43.131.31.97:http S,IP / ICMP 202.97.12.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkctl3,tcp80,0,10,1,202.97.51.193,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40010 > 43.131.31.97:http S,IP / ICMP 202.97.51.193 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkctl3,tcp80,0,11,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40011 > 43.131.31.97:http S,
+unkctl3,tcp80,0,12,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40012 > 43.131.31.97:http S,
+unkctl3,tcp80,0,13,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40013 > 43.131.31.97:http S,
+unkctl3,tcp80,0,14,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40014 > 43.131.31.97:http S,
+unkctl3,tcp80,0,15,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40015 > 43.131.31.97:http S,
+unkctl3,tcp80,0,16,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40016 > 43.131.31.97:http S,
+unkctl3,tcp80,0,17,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40017 > 43.131.31.97:http S,
+unkctl3,tcp80,0,18,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40018 > 43.131.31.97:http S,
+unkctl3,tcp80,0,19,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40019 > 43.131.31.97:http S,
+unkctl3,tcp80,0,20,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40020 > 43.131.31.97:http S,
+unkctl3,tcp80,0,21,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40021 > 43.131.31.97:http S,
+unkctl3,tcp80,0,22,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40022 > 43.131.31.97:http S,
+unkctl3,tcp80,0,23,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40023 > 43.131.31.97:http S,
+unkctl3,tcp80,0,24,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40024 > 43.131.31.97:http S,
+unkctl3,tcp80,0,25,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40025 > 43.131.31.97:http S,
+unkctl3,tcp80,0,26,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40026 > 43.131.31.97:http S,
+unkctl3,tcp80,0,27,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40027 > 43.131.31.97:http S,
+unkctl3,tcp80,0,28,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40028 > 43.131.31.97:http S,
+unkctl3,tcp80,0,29,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40029 > 43.131.31.97:http S,
+unkctl3,tcp80,0,30,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40030 > 43.131.31.97:http S,
+unkctl3,tcp443,0,1,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40001 > 43.131.31.97:https S,
+unkctl3,tcp443,0,2,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40002 > 43.131.31.97:https S,
+unkctl3,tcp443,0,3,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40003 > 43.131.31.97:https S,
+unkctl3,tcp443,0,4,1,10.200.46.97,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40004 > 43.131.31.97:https S,IP / ICMP 10.200.46.97 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkctl3,tcp443,0,5,1,10.162.8.38,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40005 > 43.131.31.97:https S,IP / ICMP 10.162.8.38 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkctl3,tcp443,0,6,1,36.110.203.205,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40006 > 43.131.31.97:https S,IP / ICMP 36.110.203.205 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkctl3,tcp443,0,7,1,36.110.243.125,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40007 > 43.131.31.97:https S,IP / ICMP 36.110.243.125 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkctl3,tcp443,0,8,1,202.97.94.230,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40008 > 43.131.31.97:https S,IP / ICMP 202.97.94.230 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkctl3,tcp443,0,9,1,202.97.12.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40009 > 43.131.31.97:https S,IP / ICMP 202.97.12.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkctl3,tcp443,0,10,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40010 > 43.131.31.97:https S,
+unkctl3,tcp443,0,11,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40011 > 43.131.31.97:https S,
+unkctl3,tcp443,0,12,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40012 > 43.131.31.97:https S,
+unkctl3,tcp443,0,13,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40013 > 43.131.31.97:https S,
+unkctl3,tcp443,0,14,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40014 > 43.131.31.97:https S,
+unkctl3,tcp443,0,15,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40015 > 43.131.31.97:https S,
+unkctl3,tcp443,0,16,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40016 > 43.131.31.97:https S,
+unkctl3,tcp443,0,17,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40017 > 43.131.31.97:https S,
+unkctl3,tcp443,0,18,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40018 > 43.131.31.97:https S,
+unkctl3,tcp443,0,19,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40019 > 43.131.31.97:https S,
+unkctl3,tcp443,0,20,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40020 > 43.131.31.97:https S,
+unkctl3,tcp443,0,21,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40021 > 43.131.31.97:https S,
+unkctl3,tcp443,0,22,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40022 > 43.131.31.97:https S,
+unkctl3,tcp443,0,23,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40023 > 43.131.31.97:https S,
+unkctl3,tcp443,0,24,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40024 > 43.131.31.97:https S,
+unkctl3,tcp443,0,25,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40025 > 43.131.31.97:https S,
+unkctl3,tcp443,0,26,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40026 > 43.131.31.97:https S,
+unkctl3,tcp443,0,27,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40027 > 43.131.31.97:https S,
+unkctl3,tcp443,0,28,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40028 > 43.131.31.97:https S,
+unkctl3,tcp443,0,29,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40029 > 43.131.31.97:https S,
+unkctl3,tcp443,0,30,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40030 > 43.131.31.97:https S,
+unkctl3,udp,0,1,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40001 > 43.131.31.97:33435,
+unkctl3,udp,0,2,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40002 > 43.131.31.97:33436,
+unkctl3,udp,0,3,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40003 > 43.131.31.97:33437,
+unkctl3,udp,0,4,1,10.200.46.101,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40004 > 43.131.31.97:33438,IP / ICMP 10.200.46.101 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror / Padding
+unkctl3,udp,0,5,1,10.162.8.38,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40005 > 43.131.31.97:33439,IP / ICMP 10.162.8.38 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkctl3,udp,0,6,1,36.110.203.205,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40006 > 43.131.31.97:33440,IP / ICMP 36.110.203.205 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkctl3,udp,0,7,1,36.110.243.125,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40007 > 43.131.31.97:33441,IP / ICMP 36.110.243.125 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkctl3,udp,0,8,1,202.97.94.230,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40008 > 43.131.31.97:33442,IP / ICMP 202.97.94.230 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror / Padding
+unkctl3,udp,0,9,1,202.97.12.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40009 > 43.131.31.97:33443,IP / ICMP 202.97.12.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkctl3,udp,0,10,1,202.97.51.193,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40010 > 43.131.31.97:33444,IP / ICMP 202.97.51.193 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror / Padding
+unkctl3,udp,0,11,1,4.15.125.53,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40011 > 43.131.31.97:33445,IP / ICMP 4.15.125.53 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkctl3,udp,0,12,1,62.67.66.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40012 > 43.131.31.97:33446,IP / ICMP 62.67.66.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkctl3,udp,0,13,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40013 > 43.131.31.97:33447,
+unkctl3,udp,0,14,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40014 > 43.131.31.97:33448,
+unkctl3,udp,0,15,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40015 > 43.131.31.97:33449,
+unkctl3,udp,0,16,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40016 > 43.131.31.97:33450,
+unkctl3,udp,0,17,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40017 > 43.131.31.97:33451,
+unkctl3,udp,0,18,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40018 > 43.131.31.97:33452,
+unkctl3,udp,0,19,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40019 > 43.131.31.97:33453,
+unkctl3,udp,0,20,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40020 > 43.131.31.97:33454,
+unkctl3,udp,0,21,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40021 > 43.131.31.97:33455,
+unkctl3,udp,0,22,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40022 > 43.131.31.97:33456,
+unkctl3,udp,0,23,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40023 > 43.131.31.97:33457,
+unkctl3,udp,0,24,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40024 > 43.131.31.97:33458,
+unkctl3,udp,0,25,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40025 > 43.131.31.97:33459,
+unkctl3,udp,0,26,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40026 > 43.131.31.97:33460,
+unkctl3,udp,0,27,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40027 > 43.131.31.97:33461,
+unkctl3,udp,0,28,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40028 > 43.131.31.97:33462,
+unkctl3,udp,0,29,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40029 > 43.131.31.97:33463,
+unkctl3,udp,0,30,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40030 > 43.131.31.97:33464,
+unkctl3,gre,0,1,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,2,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,3,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,4,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,5,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,6,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,7,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,8,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,9,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,10,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,11,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,12,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,13,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,14,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,15,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,16,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,17,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,18,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,19,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,20,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,21,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,22,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,23,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,24,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,25,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,26,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,27,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,28,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,29,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl3,gre,0,30,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,icmp,0,1,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,2,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,3,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,4,1,10.200.46.101,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 10.200.46.101 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror / Padding
+unkres3,icmp,0,5,1,10.162.8.38,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 10.162.8.38 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkres3,icmp,0,6,1,36.110.203.205,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 36.110.203.205 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkres3,icmp,0,7,1,36.110.243.125,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 36.110.243.125 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkres3,icmp,0,8,1,202.97.94.230,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.94.230 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror / Padding
+unkres3,icmp,0,9,1,202.97.12.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.12.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkres3,icmp,0,10,1,202.97.51.193,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.51.193 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror / Padding
+unkres3,icmp,0,11,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,12,1,62.67.66.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 62.67.66.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkres3,icmp,0,13,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,14,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,15,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,16,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,17,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,18,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,19,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres3,icmp,0,20,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres3,icmp,0,21,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,22,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres3,icmp,0,23,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,24,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres3,icmp,0,25,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres3,icmp,0,26,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres3,icmp,0,27,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres3,icmp,0,28,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres3,icmp,0,29,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres3,icmp,0,30,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres3,tcp80,0,1,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40001 > 43.131.31.97:http S,
+unkres3,tcp80,0,2,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40002 > 43.131.31.97:http S,
+unkres3,tcp80,0,3,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40003 > 43.131.31.97:http S,
+unkres3,tcp80,0,4,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40004 > 43.131.31.97:http S,
+unkres3,tcp80,0,5,1,10.162.8.38,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40005 > 43.131.31.97:http S,IP / ICMP 10.162.8.38 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkres3,tcp80,0,6,1,36.110.203.205,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40006 > 43.131.31.97:http S,IP / ICMP 36.110.203.205 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkres3,tcp80,0,7,1,36.110.243.125,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40007 > 43.131.31.97:http S,IP / ICMP 36.110.243.125 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkres3,tcp80,0,8,1,202.97.94.230,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40008 > 43.131.31.97:http S,IP / ICMP 202.97.94.230 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkres3,tcp80,0,9,1,202.97.12.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40009 > 43.131.31.97:http S,IP / ICMP 202.97.12.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkres3,tcp80,0,10,1,202.97.51.193,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40010 > 43.131.31.97:http S,IP / ICMP 202.97.51.193 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkres3,tcp80,0,11,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40011 > 43.131.31.97:http S,
+unkres3,tcp80,0,12,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40012 > 43.131.31.97:http S,
+unkres3,tcp80,0,13,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40013 > 43.131.31.97:http S,
+unkres3,tcp80,0,14,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40014 > 43.131.31.97:http S,
+unkres3,tcp80,0,15,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40015 > 43.131.31.97:http S,
+unkres3,tcp80,0,16,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40016 > 43.131.31.97:http S,
+unkres3,tcp80,0,17,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40017 > 43.131.31.97:http S,
+unkres3,tcp80,0,18,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40018 > 43.131.31.97:http S,
+unkres3,tcp80,0,19,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40019 > 43.131.31.97:http S,
+unkres3,tcp80,0,20,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40020 > 43.131.31.97:http S,
+unkres3,tcp80,0,21,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40021 > 43.131.31.97:http S,
+unkres3,tcp80,0,22,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40022 > 43.131.31.97:http S,
+unkres3,tcp80,0,23,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40023 > 43.131.31.97:http S,
+unkres3,tcp80,0,24,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40024 > 43.131.31.97:http S,
+unkres3,tcp80,0,25,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40025 > 43.131.31.97:http S,
+unkres3,tcp80,0,26,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40026 > 43.131.31.97:http S,
+unkres3,tcp80,0,27,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40027 > 43.131.31.97:http S,
+unkres3,tcp80,0,28,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40028 > 43.131.31.97:http S,
+unkres3,tcp80,0,29,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40029 > 43.131.31.97:http S,
+unkres3,tcp80,0,30,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40030 > 43.131.31.97:http S,
+unkres3,tcp443,0,1,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40001 > 43.131.31.97:https S,
+unkres3,tcp443,0,2,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40002 > 43.131.31.97:https S,
+unkres3,tcp443,0,3,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40003 > 43.131.31.97:https S,
+unkres3,tcp443,0,4,1,10.200.46.97,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40004 > 43.131.31.97:https S,IP / ICMP 10.200.46.97 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkres3,tcp443,0,5,1,10.162.8.38,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40005 > 43.131.31.97:https S,IP / ICMP 10.162.8.38 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkres3,tcp443,0,6,1,36.110.203.205,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40006 > 43.131.31.97:https S,IP / ICMP 36.110.203.205 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkres3,tcp443,0,7,1,36.110.243.125,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40007 > 43.131.31.97:https S,IP / ICMP 36.110.243.125 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkres3,tcp443,0,8,1,202.97.94.230,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40008 > 43.131.31.97:https S,IP / ICMP 202.97.94.230 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkres3,tcp443,0,9,1,202.97.12.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40009 > 43.131.31.97:https S,IP / ICMP 202.97.12.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror
+unkres3,tcp443,0,10,1,202.97.51.193,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40010 > 43.131.31.97:https S,IP / ICMP 202.97.51.193 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkres3,tcp443,0,11,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40011 > 43.131.31.97:https S,
+unkres3,tcp443,0,12,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40012 > 43.131.31.97:https S,
+unkres3,tcp443,0,13,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40013 > 43.131.31.97:https S,
+unkres3,tcp443,0,14,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40014 > 43.131.31.97:https S,
+unkres3,tcp443,0,15,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40015 > 43.131.31.97:https S,
+unkres3,tcp443,0,16,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40016 > 43.131.31.97:https S,
+unkres3,tcp443,0,17,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40017 > 43.131.31.97:https S,
+unkres3,tcp443,0,18,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40018 > 43.131.31.97:https S,
+unkres3,tcp443,0,19,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40019 > 43.131.31.97:https S,
+unkres3,tcp443,0,20,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40020 > 43.131.31.97:https S,
+unkres3,tcp443,0,21,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40021 > 43.131.31.97:https S,
+unkres3,tcp443,0,22,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40022 > 43.131.31.97:https S,
+unkres3,tcp443,0,23,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40023 > 43.131.31.97:https S,
+unkres3,tcp443,0,24,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40024 > 43.131.31.97:https S,
+unkres3,tcp443,0,25,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40025 > 43.131.31.97:https S,
+unkres3,tcp443,0,26,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40026 > 43.131.31.97:https S,
+unkres3,tcp443,0,27,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40027 > 43.131.31.97:https S,
+unkres3,tcp443,0,28,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40028 > 43.131.31.97:https S,
+unkres3,tcp443,0,29,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40029 > 43.131.31.97:https S,
+unkres3,tcp443,0,30,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40030 > 43.131.31.97:https S,
+unkres3,udp,0,1,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40001 > 43.131.31.97:33435,
+unkres3,udp,0,2,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40002 > 43.131.31.97:33436,
+unkres3,udp,0,3,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40003 > 43.131.31.97:33437,
+unkres3,udp,0,4,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40004 > 43.131.31.97:33438,
+unkres3,udp,0,5,1,10.162.8.38,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40005 > 43.131.31.97:33439,IP / ICMP 10.162.8.38 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkres3,udp,0,6,1,36.110.203.205,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40006 > 43.131.31.97:33440,IP / ICMP 36.110.203.205 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkres3,udp,0,7,1,36.110.243.125,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40007 > 43.131.31.97:33441,IP / ICMP 36.110.243.125 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkres3,udp,0,8,1,202.97.94.230,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40008 > 43.131.31.97:33442,IP / ICMP 202.97.94.230 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror / Padding
+unkres3,udp,0,9,1,202.97.12.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40009 > 43.131.31.97:33443,IP / ICMP 202.97.12.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkres3,udp,0,10,1,202.97.51.193,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40010 > 43.131.31.97:33444,IP / ICMP 202.97.51.193 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror / Padding
+unkres3,udp,0,11,1,4.15.125.53,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40011 > 43.131.31.97:33445,IP / ICMP 4.15.125.53 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkres3,udp,0,12,1,62.67.66.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40012 > 43.131.31.97:33446,IP / ICMP 62.67.66.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkres3,udp,0,13,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40013 > 43.131.31.97:33447,
+unkres3,udp,0,14,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40014 > 43.131.31.97:33448,
+unkres3,udp,0,15,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40015 > 43.131.31.97:33449,
+unkres3,udp,0,16,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40016 > 43.131.31.97:33450,
+unkres3,udp,0,17,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40017 > 43.131.31.97:33451,
+unkres3,udp,0,18,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40018 > 43.131.31.97:33452,
+unkres3,udp,0,19,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40019 > 43.131.31.97:33453,
+unkres3,udp,0,20,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40020 > 43.131.31.97:33454,
+unkres3,udp,0,21,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40021 > 43.131.31.97:33455,
+unkres3,udp,0,22,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40022 > 43.131.31.97:33456,
+unkres3,udp,0,23,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40023 > 43.131.31.97:33457,
+unkres3,udp,0,24,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40024 > 43.131.31.97:33458,
+unkres3,udp,0,25,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40025 > 43.131.31.97:33459,
+unkres3,udp,0,26,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40026 > 43.131.31.97:33460,
+unkres3,udp,0,27,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40027 > 43.131.31.97:33461,
+unkres3,udp,0,28,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40028 > 43.131.31.97:33462,
+unkres3,udp,0,29,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40029 > 43.131.31.97:33463,
+unkres3,udp,0,30,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40030 > 43.131.31.97:33464,
+unkres3,gre,0,1,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,2,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,3,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,4,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,5,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,6,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,7,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,8,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,9,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,10,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,11,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,12,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,13,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,14,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,15,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,16,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,17,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,18,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,19,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,20,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,21,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,22,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,23,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,24,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,25,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,26,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,27,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,28,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,29,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres3,gre,0,30,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,icmp,0,1,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,2,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,3,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,4,1,10.200.46.101,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 10.200.46.101 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror / Padding
+unkctl40,icmp,0,5,1,10.162.8.38,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 10.162.8.38 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkctl40,icmp,0,6,1,36.110.203.205,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 36.110.203.205 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkctl40,icmp,0,7,1,36.110.243.125,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 36.110.243.125 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkctl40,icmp,0,8,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,9,1,202.97.12.170,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.12.170 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkctl40,icmp,0,10,1,202.97.51.193,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.51.193 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror / Padding
+unkctl40,icmp,0,11,1,4.15.125.53,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 4.15.125.53 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkctl40,icmp,0,12,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,13,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,14,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,15,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,16,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,17,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,18,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,19,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,20,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkctl40,icmp,0,21,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,22,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,23,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,24,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkctl40,icmp,0,25,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkctl40,icmp,0,26,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,27,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,28,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkctl40,icmp,0,29,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,icmp,0,30,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkctl40,tcp80,0,1,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40001 > 43.131.31.97:http S,
+unkctl40,tcp80,0,2,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40002 > 43.131.31.97:http S,
+unkctl40,tcp80,0,3,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40003 > 43.131.31.97:http S,
+unkctl40,tcp80,0,4,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40004 > 43.131.31.97:http S,
+unkctl40,tcp80,0,5,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40005 > 43.131.31.97:http S,
+unkctl40,tcp80,0,6,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40006 > 43.131.31.97:http S,
+unkctl40,tcp80,0,7,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40007 > 43.131.31.97:http S,
+unkctl40,tcp80,0,8,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40008 > 43.131.31.97:http S,
+unkctl40,tcp80,0,9,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40009 > 43.131.31.97:http S,
+unkctl40,tcp80,0,10,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40010 > 43.131.31.97:http S,
+unkctl40,tcp80,0,11,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40011 > 43.131.31.97:http S,
+unkctl40,tcp80,0,12,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40012 > 43.131.31.97:http S,
+unkctl40,tcp80,0,13,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40013 > 43.131.31.97:http S,
+unkctl40,tcp80,0,14,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40014 > 43.131.31.97:http S,
+unkctl40,tcp80,0,15,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40015 > 43.131.31.97:http S,
+unkctl40,tcp80,0,16,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40016 > 43.131.31.97:http S,
+unkctl40,tcp80,0,17,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40017 > 43.131.31.97:http S,
+unkctl40,tcp80,0,18,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40018 > 43.131.31.97:http S,
+unkctl40,tcp80,0,19,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40019 > 43.131.31.97:http S,
+unkctl40,tcp80,0,20,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40020 > 43.131.31.97:http S,
+unkctl40,tcp80,0,21,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40021 > 43.131.31.97:http S,
+unkctl40,tcp80,0,22,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40022 > 43.131.31.97:http S,
+unkctl40,tcp80,0,23,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40023 > 43.131.31.97:http S,
+unkctl40,tcp80,0,24,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40024 > 43.131.31.97:http S,
+unkctl40,tcp80,0,25,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40025 > 43.131.31.97:http S,
+unkctl40,tcp80,0,26,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40026 > 43.131.31.97:http S,
+unkctl40,tcp80,0,27,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40027 > 43.131.31.97:http S,
+unkctl40,tcp80,0,28,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40028 > 43.131.31.97:http S,
+unkctl40,tcp80,0,29,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40029 > 43.131.31.97:http S,
+unkctl40,tcp80,0,30,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40030 > 43.131.31.97:http S,
+unkctl40,tcp443,0,1,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40001 > 43.131.31.97:https S,
+unkctl40,tcp443,0,2,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40002 > 43.131.31.97:https S,
+unkctl40,tcp443,0,3,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40003 > 43.131.31.97:https S,
+unkctl40,tcp443,0,4,1,10.200.46.97,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40004 > 43.131.31.97:https S,IP / ICMP 10.200.46.97 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkctl40,tcp443,0,5,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40005 > 43.131.31.97:https S,
+unkctl40,tcp443,0,6,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40006 > 43.131.31.97:https S,
+unkctl40,tcp443,0,7,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40007 > 43.131.31.97:https S,
+unkctl40,tcp443,0,8,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40008 > 43.131.31.97:https S,
+unkctl40,tcp443,0,9,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40009 > 43.131.31.97:https S,
+unkctl40,tcp443,0,10,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40010 > 43.131.31.97:https S,
+unkctl40,tcp443,0,11,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40011 > 43.131.31.97:https S,
+unkctl40,tcp443,0,12,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40012 > 43.131.31.97:https S,
+unkctl40,tcp443,0,13,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40013 > 43.131.31.97:https S,
+unkctl40,tcp443,0,14,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40014 > 43.131.31.97:https S,
+unkctl40,tcp443,0,15,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40015 > 43.131.31.97:https S,
+unkctl40,tcp443,0,16,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40016 > 43.131.31.97:https S,
+unkctl40,tcp443,0,17,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40017 > 43.131.31.97:https S,
+unkctl40,tcp443,0,18,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40018 > 43.131.31.97:https S,
+unkctl40,tcp443,0,19,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40019 > 43.131.31.97:https S,
+unkctl40,tcp443,0,20,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40020 > 43.131.31.97:https S,
+unkctl40,tcp443,0,21,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40021 > 43.131.31.97:https S,
+unkctl40,tcp443,0,22,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40022 > 43.131.31.97:https S,
+unkctl40,tcp443,0,23,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40023 > 43.131.31.97:https S,
+unkctl40,tcp443,0,24,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40024 > 43.131.31.97:https S,
+unkctl40,tcp443,0,25,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40025 > 43.131.31.97:https S,
+unkctl40,tcp443,0,26,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40026 > 43.131.31.97:https S,
+unkctl40,tcp443,0,27,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40027 > 43.131.31.97:https S,
+unkctl40,tcp443,0,28,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40028 > 43.131.31.97:https S,
+unkctl40,tcp443,0,29,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40029 > 43.131.31.97:https S,
+unkctl40,tcp443,0,30,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40030 > 43.131.31.97:https S,
+unkctl40,udp,0,1,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40001 > 43.131.31.97:33435,
+unkctl40,udp,0,2,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40002 > 43.131.31.97:33436,
+unkctl40,udp,0,3,1,10.200.235.185,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40003 > 43.131.31.97:33437,IP / ICMP 10.200.235.185 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror
+unkctl40,udp,0,4,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40004 > 43.131.31.97:33438,
+unkctl40,udp,0,5,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40005 > 43.131.31.97:33439,
+unkctl40,udp,0,6,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40006 > 43.131.31.97:33440,
+unkctl40,udp,0,7,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40007 > 43.131.31.97:33441,
+unkctl40,udp,0,8,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40008 > 43.131.31.97:33442,
+unkctl40,udp,0,9,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40009 > 43.131.31.97:33443,
+unkctl40,udp,0,10,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40010 > 43.131.31.97:33444,
+unkctl40,udp,0,11,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40011 > 43.131.31.97:33445,
+unkctl40,udp,0,12,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40012 > 43.131.31.97:33446,
+unkctl40,udp,0,13,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40013 > 43.131.31.97:33447,
+unkctl40,udp,0,14,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40014 > 43.131.31.97:33448,
+unkctl40,udp,0,15,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40015 > 43.131.31.97:33449,
+unkctl40,udp,0,16,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40016 > 43.131.31.97:33450,
+unkctl40,udp,0,17,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40017 > 43.131.31.97:33451,
+unkctl40,udp,0,18,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40018 > 43.131.31.97:33452,
+unkctl40,udp,0,19,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40019 > 43.131.31.97:33453,
+unkctl40,udp,0,20,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40020 > 43.131.31.97:33454,
+unkctl40,udp,0,21,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40021 > 43.131.31.97:33455,
+unkctl40,udp,0,22,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40022 > 43.131.31.97:33456,
+unkctl40,udp,0,23,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40023 > 43.131.31.97:33457,
+unkctl40,udp,0,24,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40024 > 43.131.31.97:33458,
+unkctl40,udp,0,25,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40025 > 43.131.31.97:33459,
+unkctl40,udp,0,26,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40026 > 43.131.31.97:33460,
+unkctl40,udp,0,27,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40027 > 43.131.31.97:33461,
+unkctl40,udp,0,28,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40028 > 43.131.31.97:33462,
+unkctl40,udp,0,29,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40029 > 43.131.31.97:33463,
+unkctl40,udp,0,30,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40030 > 43.131.31.97:33464,
+unkctl40,gre,0,1,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,2,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,3,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,4,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,5,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,6,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,7,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,8,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,9,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,10,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,11,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,12,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,13,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,14,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,15,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,16,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,17,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,18,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,19,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,20,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,21,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,22,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,23,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,24,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,25,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,26,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,27,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,28,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,29,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkctl40,gre,0,30,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,icmp,0,1,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,2,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,3,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,4,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,5,1,10.162.8.38,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 10.162.8.38 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkres40,icmp,0,6,1,36.110.203.205,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 36.110.203.205 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkres40,icmp,0,7,1,36.110.243.121,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 36.110.243.121 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkres40,icmp,0,8,1,202.97.61.222,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.61.222 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkres40,icmp,0,9,1,202.97.54.66,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.54.66 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkres40,icmp,0,10,1,202.97.59.106,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 202.97.59.106 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror / Padding
+unkres40,icmp,0,11,1,4.15.125.53,172.21.16.8,icmp-time-exceeded,ttl expired,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 4.15.125.53 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / ICMPerror
+unkres40,icmp,0,12,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,13,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,14,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,15,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,16,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,17,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres40,icmp,0,18,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres40,icmp,0,19,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres40,icmp,0,20,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,21,1,43.131.31.97,172.21.16.8,icmp-echo-reply,target replied,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,IP / ICMP 43.131.31.97 > 172.21.16.8 echo-reply 0
+unkres40,icmp,0,22,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,23,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,24,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,25,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,26,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,27,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,28,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,29,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,icmp,0,30,0,,,no-reply,timeout,IP / ICMP 172.21.16.8 > 43.131.31.97 echo-request 0,
+unkres40,tcp80,0,1,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40001 > 43.131.31.97:http S,
+unkres40,tcp80,0,2,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40002 > 43.131.31.97:http S,
+unkres40,tcp80,0,3,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40003 > 43.131.31.97:http S,
+unkres40,tcp80,0,4,1,10.200.46.97,172.21.16.8,icmp-time-exceeded,ttl expired,IP / TCP 172.21.16.8:40004 > 43.131.31.97:http S,IP / ICMP 10.200.46.97 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / TCPerror / Padding
+unkres40,tcp80,0,5,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40005 > 43.131.31.97:http S,
+unkres40,tcp80,0,6,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40006 > 43.131.31.97:http S,
+unkres40,tcp80,0,7,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40007 > 43.131.31.97:http S,
+unkres40,tcp80,0,8,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40008 > 43.131.31.97:http S,
+unkres40,tcp80,0,9,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40009 > 43.131.31.97:http S,
+unkres40,tcp80,0,10,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40010 > 43.131.31.97:http S,
+unkres40,tcp80,0,11,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40011 > 43.131.31.97:http S,
+unkres40,tcp80,0,12,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40012 > 43.131.31.97:http S,
+unkres40,tcp80,0,13,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40013 > 43.131.31.97:http S,
+unkres40,tcp80,0,14,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40014 > 43.131.31.97:http S,
+unkres40,tcp80,0,15,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40015 > 43.131.31.97:http S,
+unkres40,tcp80,0,16,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40016 > 43.131.31.97:http S,
+unkres40,tcp80,0,17,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40017 > 43.131.31.97:http S,
+unkres40,tcp80,0,18,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40018 > 43.131.31.97:http S,
+unkres40,tcp80,0,19,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40019 > 43.131.31.97:http S,
+unkres40,tcp80,0,20,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40020 > 43.131.31.97:http S,
+unkres40,tcp80,0,21,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40021 > 43.131.31.97:http S,
+unkres40,tcp80,0,22,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40022 > 43.131.31.97:http S,
+unkres40,tcp80,0,23,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40023 > 43.131.31.97:http S,
+unkres40,tcp80,0,24,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40024 > 43.131.31.97:http S,
+unkres40,tcp80,0,25,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40025 > 43.131.31.97:http S,
+unkres40,tcp80,0,26,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40026 > 43.131.31.97:http S,
+unkres40,tcp80,0,27,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40027 > 43.131.31.97:http S,
+unkres40,tcp80,0,28,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40028 > 43.131.31.97:http S,
+unkres40,tcp80,0,29,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40029 > 43.131.31.97:http S,
+unkres40,tcp80,0,30,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40030 > 43.131.31.97:http S,
+unkres40,tcp443,0,1,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40001 > 43.131.31.97:https S,
+unkres40,tcp443,0,2,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40002 > 43.131.31.97:https S,
+unkres40,tcp443,0,3,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40003 > 43.131.31.97:https S,
+unkres40,tcp443,0,4,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40004 > 43.131.31.97:https S,
+unkres40,tcp443,0,5,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40005 > 43.131.31.97:https S,
+unkres40,tcp443,0,6,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40006 > 43.131.31.97:https S,
+unkres40,tcp443,0,7,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40007 > 43.131.31.97:https S,
+unkres40,tcp443,0,8,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40008 > 43.131.31.97:https S,
+unkres40,tcp443,0,9,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40009 > 43.131.31.97:https S,
+unkres40,tcp443,0,10,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40010 > 43.131.31.97:https S,
+unkres40,tcp443,0,11,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40011 > 43.131.31.97:https S,
+unkres40,tcp443,0,12,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40012 > 43.131.31.97:https S,
+unkres40,tcp443,0,13,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40013 > 43.131.31.97:https S,
+unkres40,tcp443,0,14,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40014 > 43.131.31.97:https S,
+unkres40,tcp443,0,15,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40015 > 43.131.31.97:https S,
+unkres40,tcp443,0,16,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40016 > 43.131.31.97:https S,
+unkres40,tcp443,0,17,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40017 > 43.131.31.97:https S,
+unkres40,tcp443,0,18,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40018 > 43.131.31.97:https S,
+unkres40,tcp443,0,19,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40019 > 43.131.31.97:https S,
+unkres40,tcp443,0,20,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40020 > 43.131.31.97:https S,
+unkres40,tcp443,0,21,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40021 > 43.131.31.97:https S,
+unkres40,tcp443,0,22,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40022 > 43.131.31.97:https S,
+unkres40,tcp443,0,23,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40023 > 43.131.31.97:https S,
+unkres40,tcp443,0,24,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40024 > 43.131.31.97:https S,
+unkres40,tcp443,0,25,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40025 > 43.131.31.97:https S,
+unkres40,tcp443,0,26,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40026 > 43.131.31.97:https S,
+unkres40,tcp443,0,27,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40027 > 43.131.31.97:https S,
+unkres40,tcp443,0,28,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40028 > 43.131.31.97:https S,
+unkres40,tcp443,0,29,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40029 > 43.131.31.97:https S,
+unkres40,tcp443,0,30,0,,,no-reply,timeout,IP / TCP 172.21.16.8:40030 > 43.131.31.97:https S,
+unkres40,udp,0,1,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40001 > 43.131.31.97:33435,
+unkres40,udp,0,2,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40002 > 43.131.31.97:33436,
+unkres40,udp,0,3,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40003 > 43.131.31.97:33437,
+unkres40,udp,0,4,1,10.200.46.101,172.21.16.8,icmp-time-exceeded,ttl expired,IP / UDP 172.21.16.8:40004 > 43.131.31.97:33438,IP / ICMP 10.200.46.101 > 172.21.16.8 time-exceeded ttl-zero-during-transit / IPerror / UDPerror / Padding
+unkres40,udp,0,5,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40005 > 43.131.31.97:33439,
+unkres40,udp,0,6,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40006 > 43.131.31.97:33440,
+unkres40,udp,0,7,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40007 > 43.131.31.97:33441,
+unkres40,udp,0,8,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40008 > 43.131.31.97:33442,
+unkres40,udp,0,9,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40009 > 43.131.31.97:33443,
+unkres40,udp,0,10,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40010 > 43.131.31.97:33444,
+unkres40,udp,0,11,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40011 > 43.131.31.97:33445,
+unkres40,udp,0,12,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40012 > 43.131.31.97:33446,
+unkres40,udp,0,13,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40013 > 43.131.31.97:33447,
+unkres40,udp,0,14,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40014 > 43.131.31.97:33448,
+unkres40,udp,0,15,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40015 > 43.131.31.97:33449,
+unkres40,udp,0,16,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40016 > 43.131.31.97:33450,
+unkres40,udp,0,17,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40017 > 43.131.31.97:33451,
+unkres40,udp,0,18,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40018 > 43.131.31.97:33452,
+unkres40,udp,0,19,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40019 > 43.131.31.97:33453,
+unkres40,udp,0,20,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40020 > 43.131.31.97:33454,
+unkres40,udp,0,21,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40021 > 43.131.31.97:33455,
+unkres40,udp,0,22,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40022 > 43.131.31.97:33456,
+unkres40,udp,0,23,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40023 > 43.131.31.97:33457,
+unkres40,udp,0,24,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40024 > 43.131.31.97:33458,
+unkres40,udp,0,25,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40025 > 43.131.31.97:33459,
+unkres40,udp,0,26,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40026 > 43.131.31.97:33460,
+unkres40,udp,0,27,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40027 > 43.131.31.97:33461,
+unkres40,udp,0,28,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40028 > 43.131.31.97:33462,
+unkres40,udp,0,29,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40029 > 43.131.31.97:33463,
+unkres40,udp,0,30,0,,,no-reply,timeout,IP / UDP 172.21.16.8:40030 > 43.131.31.97:33464,
+unkres40,gre,0,1,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,2,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,3,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,4,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,5,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,6,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,7,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,8,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,9,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,10,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,11,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,12,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,13,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,14,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,15,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,16,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,17,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,18,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,19,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,20,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,21,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,22,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,23,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,24,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,25,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,26,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,27,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,28,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,29,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,
+unkres40,gre,0,30,0,,,no-reply,timeout,IP / GRE / IP / ICMP 192.168.1.1 > 192.168.1.2 echo-request 0,

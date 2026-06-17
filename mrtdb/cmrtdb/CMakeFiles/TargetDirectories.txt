@@ -1,0 +1,3 @@
+/home/ubuntu/mrtdb/cmrtdb/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/mrtdb/cmrtdb/CMakeFiles/edit_cache.dir
+/home/ubuntu/mrtdb/cmrtdb/CMakeFiles/cmrtdb.dir

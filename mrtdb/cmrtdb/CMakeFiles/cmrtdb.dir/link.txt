@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libcmrtdb.so -o libcmrtdb.so CMakeFiles/cmrtdb.dir/cmrtdb.c.o CMakeFiles/cmrtdb.dir/rbtree.c.o CMakeFiles/cmrtdb.dir/mrtdb_index.c.o CMakeFiles/cmrtdb.dir/mrtdb_format.c.o CMakeFiles/cmrtdb.dir/cJSON.c.o CMakeFiles/cmrtdb.dir/mrtdb_load.c.o CMakeFiles/cmrtdb.dir/mrtdb_query.c.o 

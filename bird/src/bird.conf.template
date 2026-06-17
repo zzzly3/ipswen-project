@@ -1,0 +1,175 @@
+@begin
+import os
+import networkx
+from control import get_nodes
+this = int(getenv("id"))
+nodes = get_nodes()
+nets = [i for i in nodes.keys() if isinstance(i, str)]
+G = networkx.Graph()
+G.add_node(this)
+
+
+
+G.add_edge(1, 2)
+G.add_edge(2, 3)
+G.add_edge(2, 4)
+G.add_edge(3, 4)
+
+G.add_edge(10, 12)
+G.add_edge(12, 14)
+G.add_edge(12, 13)
+G.add_edge(13, 14)
+G.add_edge(14, 11)
+
+G.add_edge(21, 22)
+G.add_edge(22, 23)
+G.add_edge(21, 23)
+G.add_edge(20, 23)
+
+G.add_edge(1, 11)
+G.add_edge(1, 20)
+G.add_edge(11, 20)
+
+G.add_edge(10, 13)
+G.add_edge(10, 14)
+
+
+
+
+def peer_ip(peer):
+    for net in nets:
+        f1 = None
+        f2 = None
+        for node in nodes[net]:
+            if node['id'] == this:
+                f1 = node['ip']
+            if node['id'] == peer:
+                f2 = node['ip']
+        if f1 is not None and f2 is not None:
+            return f2
+    return nodes[peer]['ip'] # inter-domain
+@end
+
+debug protocols all;
+
+log "bird.log" all;
+
+@begin
+if this == 13 or 1:
+    echo('''
+protocol kernel {
+    scan time 20;
+    learn;
+    ipv4 {
+        preference 180;
+        import filter {
+            if net = 0.0.0.0/0 then reject;
+            accept;
+        };
+        import all;
+        # export all;
+    };
+}
+''')
+@end
+
+protocol device {
+    scan time 10;
+}
+
+protocol static {
+    ipv4;
+    include "node@(this).conf";
+    # route 111.@(this).0.0(1)128/33 via 10.10.10.1;
+    # route 222.@(this).0.0(-1)128/33 via 10.10.10.1;
+    # route 100.@(this).0.0(-2)128.128/41 via 10.10.10.1;
+    # route 200.@(this).0.0/24 via 10.10.10.1;
+# @begin
+# epoch = 4  # ex#
+# ex = {1:[13], 2:[13, 3, 22], 3:[12, 13, 14], 4:[12, 13, 14, 2, 3, 4, 21, 22, 23]}
+# if this in ex[epoch]:
+#     echo(f'include "ex{epoch}_node{this}_IPv4.conf";\n')
+#     echo(f'include "ex{epoch}_node{this}_IPswen.conf";\n')
+# @end
+}
+
+# protocol static {
+#     ipv6;
+# @begin
+# if this in ex[epoch]:
+#     echo(f'include "ex{epoch}_node{this}_IPv6.conf";')
+# @end
+# }
+
+template bgp bgp0 {
+    local as @(65100+this);
+    ipv4 {
+        import filter {
+@begin
+if this == 12:
+    echo('''if bgp_path.last = 65113 then {
+if bgp_path ~ [=65114 65113=] then {
+bgp_local_pref = 300;
+accept;
+}
+if bgp_path ~ [=65113=] then {
+bgp_local_pref = 200;
+accept;
+}
+reject;
+}''')
+elif this == 10:
+    echo('''if bgp_path.last = 65113 then {
+if bgp_path ~ [=65112 65113=] then {
+bgp_local_pref = 300;
+accept;
+}
+if bgp_path ~ [=65113=] then {
+bgp_local_pref = 200;
+accept;
+}
+reject;
+}''')
+elif this == 14:
+    echo('''if bgp_path.last = 65113 then {
+if bgp_path ~ [=65110 65113=] then {
+bgp_local_pref = 300;
+accept;
+}
+if bgp_path ~ [=65113=] then {
+bgp_local_pref = 200;
+accept;
+}
+reject;
+}''')
+@end
+            accept;
+        };
+        export all;
+        next hop self;
+    };
+    ipv6 {
+        import all;
+        export all;
+        next hop self;
+    };
+}
+
+@begin
+bgp = '''
+protocol bgp from bgp0 {
+    neighbor %s as %d;
+}
+'''
+for i in G.neighbors(this):
+    echo(bgp % (peer_ip(i), 65100 + i))
+
+
+
+# make graph
+if this == 1:
+    import matplotlib.pyplot as plt
+    pos = networkx.spring_layout(G)
+    networkx.draw(G, pos, with_labels=True, font_size=10, node_size=500, node_color='lightblue')
+    plt.savefig("graph.jpg")
+@end

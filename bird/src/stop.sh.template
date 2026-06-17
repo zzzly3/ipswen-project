@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+@begin
+from control import get_nodes
+this = int(getenv("id"))
+nodes = get_nodes()
+@end
+echo "#!/usr/bin/bash" > ~/pass.sh
+echo "echo '@(nodes[this]['password'])'" >> ~/pass.sh
+chmod +x ~/pass.sh
+SUDO_ASKPASS=~/pass.sh sudo -A ./birdcl -l down

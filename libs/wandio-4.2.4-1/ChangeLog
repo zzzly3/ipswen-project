@@ -1,0 +1,81 @@
+Version 4.2.4
+=============
+ * Debian packaging has been modernised (thanks to Perry Lorier)
+ * Fix curl handle leaking when re-attempting an HTTP request
+ * Fix bug in compression method detection based on the suffix of
+   an output filename
+ * Replace various outdated macros in configure scripts
+
+Version 4.2.3
+=============
+Thanks to Mingwei Zhang for some of the fixes in this release
+
+ * Fix segfault when wandio_wflush() is called with a NULL IO handle
+ * HTTP: return approriate error code when curl fails an HTTP request
+ * HTTP: use TCP keep-alives to prevent long-running sessions from hanging.
+
+Version 4.2.2
+=============
+Thanks to Alistair King and Mingwei Zhang for the fixes in this release
+
+ * Fixed incorrect error bug in HTTP reader when using libcurl < 7.20.0
+ * Fixed bad scoping of Swift Keystone auth requests
+ * Allow users to override Swift storage URLs via 'OS_STORAGE_URL'
+
+Version 4.2.1
+=============
+ * Fixed crashes / wacky behaviour when writing lz4 compressed output.
+
+Version 4.2.0
+=============
+ * Include wandio version number in the HTTP user-agent
+ * Improved error detection and handling when reading HTTP
+ * Replaced 'off_t' parameters and return values with 'int64_t' in
+   recently added API functions.
+ * Fixed potential uninitialised memory error when closing a wandio writer.
+ * Export symbols for all format-specific open functions.
+
+Version 4.1.2
+=============
+ * Fix buffer overflow bug in the swift reading code (thanks Alistair).
+
+Version 4.1.1
+=============
+ * Fix bad version numbering of installed libwandder.so
+
+Version 4.1.0
+=============
+Thanks to Sergey Cherepanov and Alistair King for contributing to this release
+
+ * Added support for both reading and writing lz4 compressed files.
+ * Added support for using Intel QuickAssist (if present) for reading
+   and writing gzip compressed files.
+ * Added new functionality for interacting with wandio files
+   (wandio_fgets(), wandio_vprintf(), wandio_printf())
+ * Added API function for determining correct compression method
+   based on output filename extension (wandio_detect_compression_type())
+ * Some potential performance improvements by aligning buffers sensibly.
+ * Fixed "inline" errors when building with LLVM.
+
+Version 4.0.0
+=============
+Thanks to Alistair King, Mingwei Zhang and Robert Zeh for their contributions
+
+ * Added support for reading and writing zstd.
+ * HTTP reads can now be resumed from where they left off.
+ * Added wandio_wflush API for flushing writer output without closing.
+      - implemented for zlib, thread and stdio
+ * wandiocat: fixed crash when the compression method is invalid
+ * Fixed various documentation errors and bad error checks.
+ * Re-versioned to avoid versioning issues with old packages from our libtrace
+   days.
+
+
+Version 1.0.4
+=============
+
+Full credit to Alistair King for the bug fixes in this release
+
+ * Switched from GPL to LGPL license
+ * Fixed nasty segfaults when running on a 32 bit system (hopefully for good!)
+ * Fixed another memory error when calling read after an error.

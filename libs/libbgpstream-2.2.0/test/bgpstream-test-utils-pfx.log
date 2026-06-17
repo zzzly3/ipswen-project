@@ -1,0 +1,53 @@
+# Checking section: IPv4 prefixes...
+ok     1 - IPv4 prefix from string
+PASS: bgpstream-test-utils-pfx 1 - IPv4 prefix from string
+ok     2 - IPv4 prefix to string
+PASS: bgpstream-test-utils-pfx 2 - IPv4 prefix to string
+ok     3 - IPv4 prefix generic-equals
+PASS: bgpstream-test-utils-pfx 3 - IPv4 prefix generic-equals
+ok     4 - IPv4 prefix generic-equals (cast from ipv4)
+PASS: bgpstream-test-utils-pfx 4 - IPv4 prefix generic-equals (cast from ipv4)
+ok     5 - IPv4 prefix ipv4-equals (ipv4)
+PASS: bgpstream-test-utils-pfx 5 - IPv4 prefix ipv4-equals (ipv4)
+ok     6 - IPv4 prefix contains
+PASS: bgpstream-test-utils-pfx 6 - IPv4 prefix contains
+ok     7 - IPv4 pfx_set_insert
+PASS: bgpstream-test-utils-pfx 7 - IPv4 pfx_set_insert
+ok     8 - IPv4 pfx_set_exists
+PASS: bgpstream-test-utils-pfx 8 - IPv4 pfx_set_exists
+ok     9 - IPv4 pfx_set_insert
+PASS: bgpstream-test-utils-pfx 9 - IPv4 pfx_set_insert
+ok     10 - IPv4 pfx_set_exists
+PASS: bgpstream-test-utils-pfx 10 - IPv4 pfx_set_exists
+ok     11 - IPv4 pfx_set_insert dup
+PASS: bgpstream-test-utils-pfx 11 - IPv4 pfx_set_insert dup
+ok     12 - IPv4 pfx_set_version_size
+PASS: bgpstream-test-utils-pfx 12 - IPv4 pfx_set_version_size
+# Section IPv4 prefixes: PASS
+# Checking section: IPv6 prefixes...
+ok     13 - IPv6 prefix from string
+PASS: bgpstream-test-utils-pfx 13 - IPv6 prefix from string
+ok     14 - IPv6 prefix to string
+PASS: bgpstream-test-utils-pfx 14 - IPv6 prefix to string
+ok     15 - IPv6 prefix generic-equals
+PASS: bgpstream-test-utils-pfx 15 - IPv6 prefix generic-equals
+ok     16 - IPv6 prefix generic-equals (cast from ipv6)
+PASS: bgpstream-test-utils-pfx 16 - IPv6 prefix generic-equals (cast from ipv6)
+ok     17 - IPv6 prefix ipv6-equals (ipv6)
+PASS: bgpstream-test-utils-pfx 17 - IPv6 prefix ipv6-equals (ipv6)
+ok     18 - IPv6 prefix contains
+PASS: bgpstream-test-utils-pfx 18 - IPv6 prefix contains
+ok     19 - IPv6 pfx_set_insert
+PASS: bgpstream-test-utils-pfx 19 - IPv6 pfx_set_insert
+ok     20 - IPv6 pfx_set_exists
+PASS: bgpstream-test-utils-pfx 20 - IPv6 pfx_set_exists
+ok     21 - IPv6 pfx_set_insert
+PASS: bgpstream-test-utils-pfx 21 - IPv6 pfx_set_insert
+ok     22 - IPv6 pfx_set_exists
+PASS: bgpstream-test-utils-pfx 22 - IPv6 pfx_set_exists
+ok     23 - IPv6 pfx_set_insert dup
+PASS: bgpstream-test-utils-pfx 23 - IPv6 pfx_set_insert dup
+ok     24 - IPv6 pfx_set_version_size
+PASS: bgpstream-test-utils-pfx 24 - IPv6 pfx_set_version_size
+# Section IPv6 prefixes: PASS
+1..24

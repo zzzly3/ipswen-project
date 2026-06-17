@@ -1,0 +1,79 @@
+libwandio1 (4.2.4-1) unstable; urgency=medium
+
+  * writing: fix bugs with compression method detection based on file
+    suffix.
+  * fix leaking of curl handles when an HTTP download is reset by the
+    remote peer.
+  * Trim trailing whitespace.
+  * debian/rules: Use dh_prep rather than "dh_clean -k".
+  * Use secure URI in Homepage field.
+  * Bump debhelper from deprecated 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Remove Section on wandio1-tools, Section on libwandio1 that duplicate
+    source.
+
+ -- Shane Alcock <shane@alcock.co.nz>  Fri, 21 Oct 2022 09:50:18 +1300
+
+libwandio1 (4.2.3-1) unstable; urgency=medium
+
+  * Fix segfault when wandio_wflush() is called with a NULL IO handle
+  * HTTP: return approriate error code when curl fails an HTTP request
+  * HTTP: use TCP keep-alives to prevent long-running sessions from
+    hanging.
+
+ -- Shane Alcock <salcock@waikato.ac.nz>  Thu, 14 May 2020 17:31:17 +1200
+
+libwandio1 (4.2.2-1) unstable; urgency=medium
+
+  * Fixed incorrect error bug in HTTP reader when using libcurl < 7.20.0
+  * Fixed bad scoping of Swift Keystone auth requests
+  * Allow users to override Swift storage URLs via 'OS_STORAGE_URL'
+
+ -- Shane Alcock <salcock@waikato.ac.nz>  Mon, 22 Jul 2019 11:07:50 +1200
+
+libwandio1 (4.2.1-1) unstable; urgency=medium
+
+  * Fixed bug in lz4 compression that was causing crashes and other
+    unpredictable behaviour.
+
+ -- Shane Alcock <salcock@waikato.ac.nz>  Thu, 16 May 2019 16:57:06 +1200
+
+libwandio1 (4.2.0-1) unstable; urgency=medium
+
+  * Include wandio version number in the HTTP user-agent
+  * Improved error detection and handling when reading HTTP
+  * Replaced 'off_t' parameters and return values with 'int64_t' in
+    recently added API functions.
+  * Fixed potential uninitialised memory error when closing a wandio writer.
+  * Export symbols for all format-specific 'open' functions.
+
+ -- Shane Alcock <salcock@waikato.ac.nz>  Fri, 10 May 2019 13:31:49 +1200
+
+libwandio1 (4.1.2-1) unstable; urgency=medium
+
+  * Fix swift buffer overflow bug
+
+ -- Shane Alcock <salcock@waikato.ac.nz>  Wed, 06 Mar 2019 13:07:02 +1300
+
+libwandio1 (4.1.1-1) unstable; urgency=medium
+
+  * Fix bad version number for installed .so
+
+ -- Shane Alcock <salcock@waikato.ac.nz>  Fri, 01 Mar 2019 11:53:31 +1300
+
+libwandio1 (4.1.0-1) unstable; urgency=medium
+
+  * Added support for reading and writing lz4
+  * Added support for using QuickAssist to do gzip (de)compression
+  * Added new functionality for interacting with wandio files
+    (wandio_fgets(), wandio_vprintf(), wandio_printf())
+  * Added API function for determining correct compression method
+    based on output filename extension
+
+ -- Shane Alcock <salcock@waikato.ac.nz>  Wed, 13 Feb 2019 15:11:15 +1300
+
+libwandio1 (4.0.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Brad Cowie <brad@wand.net.nz>  Tue, 06 Sep 2016 13:50:40 +1300

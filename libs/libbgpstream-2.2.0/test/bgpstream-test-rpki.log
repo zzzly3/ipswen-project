@@ -1,0 +1,3 @@
+ok     1 # SKIP section: RPKI
+SKIP: bgpstream-test-rpki 1 # SKIP section: RPKI
+1..1

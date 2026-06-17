@@ -1,0 +1,414 @@
+// the test
+strict digraph MyPicture {
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	5511
+	9304 -> 5511
+	34224 [fillcolor=green style=filled]
+	5511 -> 34224
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	57463 [fillcolor=green style=filled]
+	9304 -> 57463
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	2914 [fillcolor=green style=filled]
+	9304 -> 2914
+	3257 [fillcolor=green style=filled]
+	2914 -> 3257
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	7473
+	9304 -> 7473
+	6461
+	7473 -> 6461
+	11686 [fillcolor=green style=filled]
+	6461 -> 11686
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	2914 [fillcolor=green style=filled]
+	9304 -> 2914
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	2914 [fillcolor=green style=filled]
+	9304 -> 2914
+	3257 [fillcolor=green style=filled]
+	2914 -> 3257
+	20912 [fillcolor=green style=filled]
+	3257 -> 20912
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	37100 [fillcolor=green style=filled]
+	9304 -> 37100
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	2914 [fillcolor=green style=filled]
+	9304 -> 2914
+	293 [fillcolor=green style=filled]
+	2914 -> 293
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	174
+	1239 -> 174
+	22652 [fillcolor=green style=filled]
+	174 -> 22652
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	7473
+	9304 -> 7473
+	6461
+	7473 -> 6461
+	57866 [fillcolor=green style=filled]
+	6461 -> 57866
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	2914 [fillcolor=green style=filled]
+	9304 -> 2914
+	7018 [fillcolor=green style=filled]
+	2914 -> 7018
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	4635
+	9304 -> 4635
+	23673 [fillcolor=green style=filled]
+	4635 -> 23673
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	2914 [fillcolor=green style=filled]
+	9304 -> 2914
+	3356
+	2914 -> 3356
+	3549 [fillcolor=green style=filled]
+	3356 -> 3549
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	7473
+	9304 -> 7473
+	1299 [fillcolor=green style=filled]
+	7473 -> 1299
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	2914 [fillcolor=green style=filled]
+	9304 -> 2914
+	3356
+	2914 -> 3356
+	209
+	3356 -> 209
+	3561 [fillcolor=green style=filled]
+	209 -> 3561
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	15412
+	9304 -> 15412
+	5413 [fillcolor=green style=filled]
+	15412 -> 5413
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	3303 [fillcolor=green style=filled]
+	9304 -> 3303
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	4635
+	9304 -> 4635
+	7660 [fillcolor=green style=filled]
+	4635 -> 7660
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	2152 [fillcolor=green style=filled]
+	1239 -> 2152
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	12552
+	9304 -> 12552
+	49788 [fillcolor=green style=filled]
+	12552 -> 49788
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	15412
+	9304 -> 15412
+	6939 [fillcolor=green style=filled]
+	15412 -> 6939
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	15412
+	9304 -> 15412
+	3741 [fillcolor=green style=filled]
+	15412 -> 3741
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	2497 [fillcolor=green style=filled]
+	9304 -> 2497
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	2914 [fillcolor=green style=filled]
+	9304 -> 2914
+	23352
+	2914 -> 23352
+	20130 [fillcolor=green style=filled]
+	23352 -> 20130
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	2914 [fillcolor=green style=filled]
+	9304 -> 2914
+	6453
+	2914 -> 6453
+	1403 [fillcolor=green style=filled]
+	6453 -> 1403
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	18106 [fillcolor=green style=filled]
+	9304 -> 18106
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	3130 [fillcolor=green style=filled]
+	1239 -> 3130
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	5511
+	9304 -> 5511
+	57463 [fillcolor=green style=filled]
+	5511 -> 57463
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	3257 [fillcolor=green style=filled]
+	1239 -> 3257
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	7473
+	9304 -> 7473
+	2914 [fillcolor=green style=filled]
+	7473 -> 2914
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	3257 [fillcolor=green style=filled]
+	1239 -> 3257
+	20912 [fillcolor=green style=filled]
+	3257 -> 20912
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	3356
+	1239 -> 3356
+	293 [fillcolor=green style=filled]
+	3356 -> 293
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	7018 [fillcolor=green style=filled]
+	1239 -> 7018
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	3356
+	1239 -> 3356
+	3549 [fillcolor=green style=filled]
+	3356 -> 3549
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	7473
+	9304 -> 7473
+	6461
+	7473 -> 6461
+	5413 [fillcolor=green style=filled]
+	6461 -> 5413
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	1299 [fillcolor=green style=filled]
+	1239 -> 1299
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	6939 [fillcolor=green style=filled]
+	1239 -> 6939
+	20130 [fillcolor=green style=filled]
+	6939 -> 20130
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	7473
+	9304 -> 7473
+	6461
+	7473 -> 6461
+	3741 [fillcolor=green style=filled]
+	6461 -> 3741
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	6453
+	1239 -> 6453
+	1403 [fillcolor=green style=filled]
+	6453 -> 1403
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	3356
+	1239 -> 3356
+	209
+	3356 -> 209
+	3561 [fillcolor=green style=filled]
+	209 -> 3561
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	1239
+	9304 -> 1239
+	6939 [fillcolor=green style=filled]
+	1239 -> 6939
+	141748 [fillcolor=blue style=filled]
+	141750
+	141748 -> 141750
+	9304
+	141750 -> 9304
+	7473
+	9304 -> 7473
+	6461
+	7473 -> 6461
+	1403 [fillcolor=green style=filled]
+	6461 -> 1403
+}
