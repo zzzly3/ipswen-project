@@ -1,0 +1,12 @@
+/home/net/netmap/igc/igc_main.o
+/home/net/netmap/igc/igc_mac.o
+/home/net/netmap/igc/igc_i225.o
+/home/net/netmap/igc/igc_base.o
+/home/net/netmap/igc/igc_nvm.o
+/home/net/netmap/igc/igc_phy.o
+/home/net/netmap/igc/igc_diag.o
+/home/net/netmap/igc/igc_ethtool.o
+/home/net/netmap/igc/igc_ptp.o
+/home/net/netmap/igc/igc_dump.o
+/home/net/netmap/igc/igc_tsn.o
+/home/net/netmap/igc/igc_xdp.o

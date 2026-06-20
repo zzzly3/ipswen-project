@@ -1,0 +1,14 @@
+/home/net/netmap/netmap_mem2.o
+/home/net/netmap/netmap_mbq.o
+/home/net/netmap/netmap_legacy.o
+/home/net/netmap/netmap_bdg.o
+/home/net/netmap/netmap_kloop.o
+/home/net/netmap/netmap_vale.o
+/home/net/netmap/netmap_offloadings.o
+/home/net/netmap/netmap_pipe.o
+/home/net/netmap/netmap_monitor.o
+/home/net/netmap/netmap_generic.o
+/home/net/netmap/netmap_null.o
+/home/net/netmap/netmap_common.o
+/home/net/netmap/netmap_linux.o
+/home/net/netmap/netmap_ptnet.o

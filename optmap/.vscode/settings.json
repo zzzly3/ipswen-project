@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "bpf_endian.h": "c",
+        "inet.h": "c",
+        "optmap.h": "c"
+    }
+}
