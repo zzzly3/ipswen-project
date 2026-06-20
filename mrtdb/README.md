@@ -69,13 +69,13 @@ def addr_is_IPswen(addr):
     b = struct.unpack('BBBBBBBBBBBBBBBb', addr)
     return True if b[0] == 0 and b[1] == 0 and b[2] == 0 and b[3] == 0xff else False
 ```
-IPSWEN 地址的 MRT 表示：前 4 字节为 0，第 5 字节为 `0xff`，后续字节包含 IPv4 部分 + level + 扩展。按 `BBBBBBBBBBBBBBBb` 解包为 16 个无符号字节 + 1 个有符号字节（最后一个字节为 level）。
+IPswen 地址的 MRT 表示：前 4 字节为 0，第 5 字节为 `0xff`，后续字节包含 IPv4 部分 + level + 扩展。按 `BBBBBBBBBBBBBBBb` 解包为 16 个无符号字节 + 1 个有符号字节（最后一个字节为 level）。
 
 ```python
 def addr_is_IPv6(self, addr):
     return False if addr_is_IPv4(addr) or addr_is_IPswen(addr) else True
 ```
-排他法：既不是 IPv4 也不是 IPSWEN，则为纯 IPv6。
+排他法：既不是 IPv4 也不是 IPswen，则为纯 IPv6。
 
 #### ip2string() 地址格式化
 
@@ -93,7 +93,7 @@ def ip2string(ip):
     return inet_ntop(AF_INET6, ip)
 ```
 
-对于 IPSWEN 地址的处理逻辑：
+对于 IPswen 地址的处理逻辑：
 - `b[4:8]` 是内嵌的 IPv4 部分（4 个字节）
 - `b[-1]` 是 level（有符号整数，正数表示前向扩展、负数表示后向）
 - level=0 时等价于标准 IPv4，直接 `inet_ntop`
@@ -111,7 +111,7 @@ class BGPAttributes:
         self._cluster = None        # Cluster List 延迟解析
 ```
 
-**nexthop 属性的 IPSWEN 处理：**
+**nexthop 属性的 IPswen 处理：**
 ```python
 @property
 def nexthop(self):
@@ -123,7 +123,7 @@ def nexthop(self):
         self.bgp.ffi.addressof(self.attributes.nexthop))[:])
 ```
 
-这段代码是 IPSWEN 兼容的关键：如果路由是通过 MP_REACH_NLRI（BGP 的 Multiprotocol Reachable NLRI 属性）宣告的，它检查 `mp_info.announce[2][1]` 指针是否非空（即存在 MP 下一跳信息）；如果该下一跳被判定为 IPSWEN 地址，则**重排字节顺序**：`nh[0:4] + nh[12:16] + nh[4:12]`。这是因为 bgpdump 库内部对 IPv6 地址的字节排列与 IPSWEN 预期不同。
+这段代码是 IPswen 兼容的关键：如果路由是通过 MP_REACH_NLRI（BGP 的 Multiprotocol Reachable NLRI 属性）宣告的，它检查 `mp_info.announce[2][1]` 指针是否非空（即存在 MP 下一跳信息）；如果该下一跳被判定为 IPswen 地址，则**重排字节顺序**：`nh[0:4] + nh[12:16] + nh[4:12]`。这是因为 bgpdump 库内部对 IPv6 地址的字节排列与 IPswen 预期不同。
 
 **asPath 的 AS Set 展开逻辑：**
 ```python
@@ -205,7 +205,7 @@ struct mrtdb {
     char dir_name[32];
     int prefix_ipv4_cnt;   // IPv4 前缀计数
     int prefix_ipv6_cnt;   // IPv6 前缀计数
-    int prefix_ipswen_cnt; // IPSWEN 前缀计数
+    int prefix_ipswen_cnt; // IPswen 前缀计数
     int route_ipv4_cnt;    // IPv4 路由计数
     int route_ipv6_cnt;
     int route_ipswen_cnt;

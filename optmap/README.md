@@ -688,7 +688,7 @@ clang -O2 -target bpf -c optmap.c -o optmap_noalloc.o
 # 分别部署并测量吞吐量差异
 ```
 
-### 实验 4：添加对 IPSWEN level 的支持
+### 实验 4：添加对 IPswen level 的支持
 
 ```c
 // 在 opt_ext 中增加 level 字段
@@ -783,8 +783,8 @@ XDP 程序受到 eBPF 验证器的严格限制：
 
 - **fakedns** —— LD_PRELOAD 层的 DNS 代理，可自动为应用程序注入 IP 选项（`inject_dest_ext_option()`）
 - **happyfootball** —— Happy Eyeballs + IP 选项的多路径连接实验，optmap 可作为其底层转发层
-- **iproute2-5.5.0** —— IPSWEN 增强版 `ip route`，可设置 XDP 配合使用的路由
-- **linux-kernel** —— IPSWEN 内核，提供 `bpf_fib_lookup` 所需的 FIB 扩展
+- **iproute2-5.5.0** —— IPswen 增强版 `ip route`，可设置 XDP 配合使用的路由
+- **linux-kernel** —— IPswen 内核，提供 `bpf_fib_lookup` 所需的 FIB 扩展
 
 ---
 

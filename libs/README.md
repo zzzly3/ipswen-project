@@ -164,7 +164,7 @@ ldconfig -p | grep libbgpstream
 ## 注意事项
 
 - **预构建状态：** 两个库均已在本目录中编译过。`.o` 文件、`config.status`、`config.log` 等构建产物均保留。
-- **未经修改：** 与 `bird/`、`iproute2/` 等不同，这两个库没有 IPSWEN 相关修改。
+- **未经修改：** 与 `bird/`、`iproute2/` 等不同，这两个库没有 IPswen 相关修改。
 - **系统级安装：** 如果通过 `make install` 安装到系统，本目录中的副本可以作为备份。
 - **ABI 兼容性：** wandio 和 bgpstream 有版本依赖关系——bgpstream 2.2.0 需要 wandio 4.x。
 

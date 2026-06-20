@@ -4,11 +4,11 @@
 
 `netmap` 是一个用于超高速用户态数据包 I/O 的框架，配合 **VALE**（一个基于 netmap API 的内核级 L2 软件交换机），可在单个进程内处理**每秒数千万个数据包**，匹配 10Gbps 和 40Gbps 端口的线速（即使是最小帧）。
 
-本仓库是 IPSWEN 项目环境中使用的 netmap 本地副本，包含 **Linux 内核模块**、**VALE 交换机**、**修改版 Intel/NVIDIA/Realtek 网卡驱动**（强制启用 netmap 感知）、以及完整的用户态编程 API。
+本仓库是 IPswen 项目环境中使用的 netmap 本地副本，包含 **Linux 内核模块**、**VALE 交换机**、**修改版 Intel/NVIDIA/Realtek 网卡驱动**（强制启用 netmap 感知）、以及完整的用户态编程 API。
 
-**核心定位：** netmap 是 IPSWEN 实验平台的**底层高性能数据面**——其他组件（如 optmap 的 XDP 路由、fakedns 的地址转换、happyfootball 的多路径连接）运行在 netmap 之上的用户态协议栈中，netmap 负责在最底层以最高速度将原始数据包从网卡送到用户态应用，或从用户态应用发送到线路上。
+**核心定位：** netmap 是 IPswen 实验平台的**底层高性能数据面**——其他组件（如 optmap 的 XDP 路由、fakedns 的地址转换、happyfootball 的多路径连接）运行在 netmap 之上的用户态协议栈中，netmap 负责在最底层以最高速度将原始数据包从网卡送到用户态应用，或从用户态应用发送到线路上。
 
-**为什么在 IPSWEN 项目中使用 netmap（而非标准 Linux socket）：**
+**为什么在 IPswen 项目中使用 netmap（而非标准 Linux socket）：**
 
 | 特性 | 标准 Linux Socket | Netmap |
 |------|-------------------|--------|
@@ -94,7 +94,7 @@ netmap/
 ├── libnetmap/            # libnetmap C 库（提供 C 语言 API 封装）
 ├── utils/                # 辅助工具脚本
 ├── netmap.mak            # netmap 共享的 Makefile 变量
-├── WINDOWS/              # Windows 支持（IPSWEN 项目中不使用）
+├── WINDOWS/              # Windows 支持（IPswen 项目中不使用）
 │
 ├── config.log            # configure 执行日志
 ├── config.status         # configure 状态缓存
@@ -327,7 +327,7 @@ Host netmap port ──▶ ptnetmap ──▶ Guest netmap port
 ./get-ixgbe
 # 下载 Intel ixgbe-5.3.7 独立驱动
 # 支持的网卡：82598/82599/X520/X540/X550
-# ★ IPSWEN 实验中最常用的 10G 网卡驱动
+# ★ IPswen 实验中最常用的 10G 网卡驱动
 ```
 
 #### Intel ixgbevf (10Gbps 虚拟功能) —— 方法 2
@@ -342,7 +342,7 @@ Host netmap port ──▶ ptnetmap ──▶ Guest netmap port
 ./get-i40e
 # 下载 Intel i40e-2.4.10 独立驱动
 # 支持的网卡：X710/XL710/XXV710
-# ★ IPSWEN 高性能实验节点的选择
+# ★ IPswen 高性能实验节点的选择
 ```
 
 #### NVIDIA forcedeth (1Gbps) —— 方法 1
@@ -724,7 +724,7 @@ sudo ./pkt-gen -i vale0:0 -f tx -l 64 -n 10000 -R 100 &
 sudo ./pkt-gen -i vale0:1 -f rx -n 10000
 ```
 
-### 实验 4：测量 netmap 与 IPSWEN 项目其他组件的集成
+### 实验 4：测量 netmap 与 IPswen 项目其他组件的集成
 
 ```bash
 # 方案：netmap → optmap (XDP) 管道的吞吐量测试
@@ -750,13 +750,13 @@ cat /sys/module/netmap/parameters/*
 
 ---
 
-## IPSWEN 项目中的集成方案
+## IPswen 项目中的集成方案
 
-在 IPSWEN 实验环境中，netmap 作为底层高性能数据面，为上层应用提供原始数据包 I/O：
+在 IPswen 实验环境中，netmap 作为底层高性能数据面，为上层应用提供原始数据包 I/O：
 
 ```
 ┌──────────────────────────────────────────┐
-│  IPSWEN 用户态应用                        │
+│  IPswen 用户态应用                        │
 │  (自定义协议栈 / fakedns / happyfootball) │
 │                                          │
 │        ↕ libnetmap API                   │

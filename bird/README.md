@@ -1,8 +1,8 @@
-# bird —— BIRD Internet Routing Daemon（IPSWEN 扩展版）
+# bird —— BIRD Internet Routing Daemon（IPswen 扩展版）
 
 ## 概述
 
-本目录包含 **BIRD 2.13.1 的修改版本**，增加了对 **IPSWEN** 的实验性支持。BIRD 是 Linux/BSD 平台上最成熟的开源 BGP 路由守护进程之一，支持 BGP、OSPF、RIPv2、RIPng、Babel、BFD 等协议。此修改版使 BIRD 能作为 IPSWEN 地址族的路由反射器/边界路由器。
+本目录包含 **BIRD 2.13.1 的修改版本**，增加了对 **IPswen** 的实验性支持。BIRD 是 Linux/BSD 平台上最成熟的开源 BGP 路由守护进程之一，支持 BGP、OSPF、RIPv2、RIPng、Babel、BFD 等协议。此修改版使 BIRD 能作为 IPswen 地址族的路由反射器/边界路由器。
 
 采用 **源码/二进制/配置三合一** 组织，所有 BIRD 相关文件集中管理。
 
@@ -12,14 +12,14 @@
 
 ```
 bird/
-├── src/                         ← 完整 BIRD 2.13.1 源码（IPSWEN 补丁）
+├── src/                         ← 完整 BIRD 2.13.1 源码（IPswen 补丁）
 │   ├── proto/bgp/               ★ BGP 协议核心修改
-│   │   ├── bgp.h                SAFI_IPSWEN=127, AF_IPSWEN, ipswen_extension
+│   │   ├── bgp.h                SAFI_IPswen=127, AF_IPswen, ipswen_extension
 │   │   ├── bgp.c                能力协商、会话管理
 │   │   └── attrs.c              路由验证、属性处理
 │   ├── proto/mrt/               ★ MRT 转储修改
-│   │   ├── mrt.h                MRT_RIB_IPSWEN=13
-│   │   └── mrt.c                IPSWEN 路由读写
+│   │   ├── mrt.h                MRT_RIB_IPswen=13
+│   │   └── mrt.c                IPswen 路由读写
 │   ├── nest/ / filter/ / conf/ / lib/ / sysdep/
 │   ├── client/                  birdc CLI
 │   ├── conf.py                  Python 配置生成
@@ -40,29 +40,29 @@ bird/
 
 ---
 
-## IPSWEN 修改源码详解
+## IPswen 修改源码详解
 
-### IPSWEN 地址格式
+### IPswen 地址格式
 
 `A.B.C.D(L)E.F.G...` —— `(L)` 是有符号整数 level（`-7..7`），`E.F.G...` 是 `|L|` 个扩展字节。level=0 退化为标准 IPv4。
 
 ### 文件 1：bgp.h —— 协议类型定义
 
 ```c
-#ifdef HAVE_IPSWEN
-#define BGP_SAFI_IPSWEN 127
-#define BGP_AF_IPSWEN BGP_AF(BGP_AFI_IPV4, BGP_SAFI_IPSWEN)
+#ifdef HAVE_IPswen
+#define BGP_SAFI_IPswen 127
+#define BGP_AF_IPswen BGP_AF(BGP_AFI_IPV4, BGP_SAFI_IPswen)
 #endif
 
 struct bgp_proto {
     // ...existing fields...
-    u8 ipswen_extension;  /* IPSWEN capability negotiated */
+    u8 ipswen_extension;  /* IPswen capability negotiated */
 };
 ```
 
 **设计决策分析：**
 - SAFI 127 属于 IANA "Private Use" 范围 (128-255 是私有/实验)，但选 127 是为了靠近标准范围。如果后续需要标准化，可改为 IANA 分配的值。
-- IPSWEN 被归入 AFI=1 (IPv4) 而非 AFI=2 (IPv6)，因为它在语义上是 IPv4 的扩展而非独立协议。
+- IPswen 被归入 AFI=1 (IPv4) 而非 AFI=2 (IPv6)，因为它在语义上是 IPv4 的扩展而非独立协议。
 - `BGP_AF` 宏将 AFI 和 SAFI 编码为一个 32 位值，BIRD 内部统一用此值标识地址族。
 - `ipswen_extension` 是 `u8` 而非 `bool`，预留了未来扩展为多位标志的可能性（如版本协商）。
 
@@ -75,8 +75,8 @@ struct bgp_proto {
 ### 文件 2：bgp.c —— 会话管理与能力协商
 
 ```c
-#ifdef HAVE_IPSWEN
-  const struct bgp_af_caps *ipswen_loc = bgp_find_af_caps(local, BGP_AF_IPSWEN);
+#ifdef HAVE_IPswen
+  const struct bgp_af_caps *ipswen_loc = bgp_find_af_caps(local, BGP_AF_IPswen);
   // Compare local and remote capabilities
   // Set p->ipswen_extension = 1 if both sides support it
 #endif
@@ -85,32 +85,32 @@ struct bgp_proto {
 能力协商流程：
 1. 在 BGP OPEN 消息处理中调用 `bgp_find_af_caps()` 查找本地和远端的能力列表
 2. 如果两边都包含 `(AFI=1, SAFI=127)`，设置 `p->ipswen_extension = 1`
-3. 后续 BGP UPDATE 处理中检查此标志，决定是否接受 IPSWEN NLRI
+3. 后续 BGP UPDATE 处理中检查此标志，决定是否接受 IPswen NLRI
 
-**前提条件：** IPSWEN 通道依赖已有的 IPv4 通道——必须先建立 IPv4 Unicast 会话。这是设计决定的约束：IPSWEN 被视为 IPv4 的扩展，共享 TCP 连接和 BGP 状态机。
+**前提条件：** IPswen 通道依赖已有的 IPv4 通道——必须先建立 IPv4 Unicast 会话。这是设计决定的约束：IPswen 被视为 IPv4 的扩展，共享 TCP 连接和 BGP 状态机。
 
 ### 文件 3：attrs.c —— 路由验证
 
 ```c
-#ifdef HAVE_IPSWEN
-  /* Reject IPSWEN routes for non-IPSWEN peers */
+#ifdef HAVE_IPswen
+  /* Reject IPswen routes for non-IPswen peers */
   if (!p->ipswen_extension)
       // LOG warning and skip the NLRI
 #endif
 ```
 
-防御性编程：即使某 peer 意外发送了 IPSWEN NLRI（比如因为配置错误），只要能力没有协商，就会拒绝。这避免了将 IPSWEN 路由注入到不支持的对等体。
+防御性编程：即使某 peer 意外发送了 IPswen NLRI（比如因为配置错误），只要能力没有协商，就会拒绝。这避免了将 IPswen 路由注入到不支持的对等体。
 
 ### 文件 4+5：mrt.h + mrt.c —— MRT 转储
 
 ```c
 // mrt.h
-#define MRT_RIB_IPSWEN 13   /* Experimental RIB subtype */
+#define MRT_RIB_IPswen 13   /* Experimental RIB subtype */
 
 // mrt.c
-#ifdef HAVE_IPSWEN
-    // When dumping: write RIB subtype 13 for IPSWEN entries
-    // When reading: parse subtype 13 as IPSWEN format
+#ifdef HAVE_IPswen
+    // When dumping: write RIB subtype 13 for IPswen entries
+    // When reading: parse subtype 13 as IPswen format
 #endif
 ```
 
@@ -144,7 +144,7 @@ kernel 协议的 import filter：只从 kernel 接受 `192.0.0.0/8` 范围内的
 ```bird
 protocol static {
     ipv4;
-    include "node1_IPswen_level0_1000000.conf";  # 100 万条静态路由
+    include "node1_IPSWEN_level0_1000000.conf";  # 100 万条静态路由
 }
 ```
 
@@ -159,11 +159,11 @@ protocol bgp {
 }
 ```
 
-为什么 BGP 用 IPv6 传输？在测试床中，IPv4 地址被 IPSWEN 和 GRE 隧道占用，使用 IPv6 ULA (`fc70::/7`) 作为带外管理通道避免了地址冲突。端口 1109 非标准——用于绕过可能的 179 端口限制。
+为什么 BGP 用 IPv6 传输？在测试床中，IPv4 地址被 IPswen 和 GRE 隧道占用，使用 IPv6 ULA (`fc70::/7`) 作为带外管理通道避免了地址冲突。端口 1109 非标准——用于绕过可能的 179 端口限制。
 
 ### 百万路由文件
 
-`node1_IPswen_levelN_1000000.conf` 由 `../mrtdb/generate_bird_config.py` 程序化生成，格式：
+`node1_IPSWEN_levelN_1000000.conf` 由 `../mrtdb/generate_bird_config.py` 程序化生成，格式：
 ```bird
 route 10.0.0.0(3)128.129.130/35 via 10.10.10.1;
 route 10.0.0.1(3)128.129.130/35 via 10.10.10.1;
@@ -185,7 +185,7 @@ sudo apt update && sudo apt install -y \
     libreadline-dev libncurses-dev \
     libssh-dev libssl-dev
 
-# 必须安装 IPSWEN 内核头文件
+# 必须安装 IPswen 内核头文件
 sudo dpkg -i ../linux-kernel/linux-headers-5.4.0-ipswen-v1-20240124_001_amd64.deb
 ```
 
@@ -201,11 +201,11 @@ autoreconf -i -f
 ./configure --prefix=/usr/local 2>&1 | tee configure.log
 ```
 
-检查 IPSWEN 支持是否启用：
+检查 IPswen 支持是否启用：
 ```bash
 grep -i "ipswen" config.h
-# 应看到: #define HAVE_IPSWEN 1
-# 如果没有 → 内核头文件未包含 IPSWEN 定义
+# 应看到: #define HAVE_IPswen 1
+# 如果没有 → 内核头文件未包含 IPswen 定义
 ```
 
 ### 第三步：编译
@@ -233,7 +233,7 @@ ldd bird           # 检查动态库依赖
 |------|------|------|
 | `configure: error: Bison is missing` | Bison 未安装 | `sudo apt install bison` |
 | `fatal: Flex not found` | Flex 未安装 | `sudo apt install flex` |
-| `#define HAVE_IPSWEN` 缺失 | 内核头文件不含 IPSWEN | 安装 headers deb 包 |
+| `#define HAVE_IPswen` 缺失 | 内核头文件不含 IPswen | 安装 headers deb 包 |
 | `undefined reference to 'ipswen_aton'` | 链接失败 | 内核头文件已装但 libc 不包含 → 检查 config.log |
 | `lex.yy.c` 错误 | Flex/Bison 版本不兼容 | `sudo apt install flex bison` 更新版本 |
 
@@ -288,7 +288,7 @@ python3 dist.py ../configs/bird.conf ../configs/node1_*.conf
 
 ## 自定义实验指南
 
-### 怎样测试不同 IPSWEN level 的路由收敛时间
+### 怎样测试不同 IPswen level 的路由收敛时间
 
 ```bash
 # 加载 level=0（无扩展）
@@ -334,7 +334,7 @@ done
 ## 注意事项
 
 - **内存：** 100 万条静态路由 ≈ 1-2 GB；1000 万条 ≈ 10-15 GB
-- **IPSWEN 条件编译：** 无 IPSWEN 头文件时 BIRD 等同于上游版本
+- **IPswen 条件编译：** 无 IPswen 头文件时 BIRD 等同于上游版本
 - **私有 AS：** 65150/65151 仅在实验网络有效
 - **配置原子性：** `birdc configure` 不会中断已建立的 BGP 会话
 - **日志：** `bird.log` 持续增长——定期轮转
@@ -343,9 +343,9 @@ done
 
 ## 相关项目
 
-- **linux-kernel** —— IPSWEN 内核基础
-- **iproute2** —— `ip route` 的 IPSWEN 版
-- **net-tools** —— `ifconfig`/`route` 的 IPSWEN 版
+- **linux-kernel** —— IPswen 内核基础
+- **iproute2** —— `ip route` 的 IPswen 版
+- **net-tools** —— `ifconfig`/`route` 的 IPswen 版
 - **mrtdb** —— BGP 数据分析、BIRD 配置生成
 - **autoconfig** —— BIRD 对等体间 GRE 隧道
 
@@ -389,7 +389,7 @@ shutdown                 # 优雅退出
 ...
 8 192.168.1.8 22 root mypass
 ```
-每行: `节点ID IP SSH端口 用户名 密码`。空行分隔不同网络（如 IPv4 / IPv6 / IPSWEN 子网）。`dist.py` 和 `control.py` 解析此文件执行多节点操作。
+每行: `节点ID IP SSH端口 用户名 密码`。空行分隔不同网络（如 IPv4 / IPv6 / IPswen 子网）。`dist.py` 和 `control.py` 解析此文件执行多节点操作。
 
 ## 附录 C: 基准性能数据参考
 
@@ -414,14 +414,14 @@ shutdown                 # 优雅退出
 | 原始文件 | 大小 | 分块数 |
 |---------|------|--------|
 | `node1_IPv4_1000000.conf` | 150 MB | 2 |
-| `node1_IPswen_level0_1000000.conf` | 152 MB | 2 |
-| `node1_IPswen_level1_1000000.conf` | 155 MB | 2 |
-| `node1_IPswen_level2_1000000.conf` | 158 MB | 2 |
-| `node1_IPswen_level3_1000000.conf` | 161 MB | 2 |
-| `node1_IPswen_level4_1000000.conf` | 165 MB | 2 |
-| `node1_IPswen_level5_1000000.conf` | 168 MB | 2 |
-| `node1_IPswen_level6_1000000.conf` | 172 MB | 2 |
-| `node1_IPswen_level7_1000000.conf` | 175 MB | 2 |
+| `node1_IPSWEN_level0_1000000.conf` | 152 MB | 2 |
+| `node1_IPSWEN_level1_1000000.conf` | 155 MB | 2 |
+| `node1_IPSWEN_level2_1000000.conf` | 158 MB | 2 |
+| `node1_IPSWEN_level3_1000000.conf` | 161 MB | 2 |
+| `node1_IPSWEN_level4_1000000.conf` | 165 MB | 2 |
+| `node1_IPSWEN_level5_1000000.conf` | 168 MB | 2 |
+| `node1_IPSWEN_level6_1000000.conf` | 172 MB | 2 |
+| `node1_IPSWEN_level7_1000000.conf` | 175 MB | 2 |
 
 ### 还原方法
 
@@ -442,14 +442,14 @@ wc -l node1_IPv4_1000000.conf   # 应输出 1000000
 **方法 3: 仅还原你需要的 level**
 ```bash
 cd bird/configs
-cat node1_IPswen_level3_1000000.conf.part00 node1_IPswen_level3_1000000.conf.part01 > node1_IPswen_level3_1000000.conf
+cat node1_IPSWEN_level3_1000000.conf.part00 node1_IPSWEN_level3_1000000.conf.part01 > node1_IPSWEN_level3_1000000.conf
 ```
 
 ### 验证还原完整性
 
 ```bash
 wc -l bird/configs/node1_*.conf    # 每个文件应包含 100 万条 route 语句
-ls -lh bird/configs/node1_IPswen_level*.conf
+ls -lh bird/configs/node1_IPSWEN_level*.conf
 ```
 
 ### 注意事项

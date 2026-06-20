@@ -1,10 +1,10 @@
-# linux-kernel —— IPSWEN 定制版 Linux 5.4.0 内核
+# linux-kernel —— IPswen 定制版 Linux 5.4.0 内核
 
 ## 概述
 
-本目录包含一个打过 **IPSWEN** 补丁的 **Linux 5.4.0 LTS** 完整内核源码树，以及预编译的 Debian 安装包（`.deb`）。IPSWEN 是一种实验性 IPv4 地址扩展技术——在传统 4 字节 IPv4 地址基础上增加了一个带符号的层次 "level" 维度和对应的扩展字节，实现地址空间的树状扩展。
+本目录包含一个打过 **IPswen** 补丁的 **Linux 5.4.0 LTS** 完整内核源码树，以及预编译的 Debian 安装包（`.deb`）。IPswen 是一种实验性 IPv4 地址扩展技术——在传统 4 字节 IPv4 地址基础上增加了一个带符号的层次 "level" 维度和对应的扩展字节，实现地址空间的树状扩展。
 
-内核修改涉及网络协议栈的六个关键层面，是整个 IPSWEN 研究生态的**系统基石**——所有用户态工具（iproute2、net-tools、BIRD、unpv13e）都依赖这些内核修改提供的系统调用和数据结构。
+内核修改涉及网络协议栈的六个关键层面，是整个 IPswen 研究生态的**系统基石**——所有用户态工具（iproute2、net-tools、BIRD、unpv13e）都依赖这些内核修改提供的系统调用和数据结构。
 
 ---
 
@@ -20,11 +20,11 @@ linux-kernel/
 │   │   ├── netfilter/    # Netfilter 钩子
 │   │   └── bridge/       # 桥接
 │   ├── include/
-│   │   ├── net/ipswen.h  # ★ IPSWEN 地址结构体
+│   │   ├── net/ipswen.h  # ★ IPswen 地址结构体
 │   │   └── uapi/linux/rtnetlink.h  # ★ RTA_DST_EXT 属性
 │   ├── arch/    # x86, ARM 等架构
 │   ├── block/ certs/ crypto/ drivers/ fs/ mm/ kernel/
-│   ├── KernelCodeSense.txt  # IPSWEN 修改涉及的文件索引
+│   ├── KernelCodeSense.txt  # IPswen 修改涉及的文件索引
 │   ├── Makefile / .config
 │   └── README
 │
@@ -41,8 +41,8 @@ linux-kernel/
 5.4.0  -ipswen  -v1       -20240124
   │       │       │           │
   │       │       │           └ 构建日期: 2024年1月24日
-  │       │       └ IPSWEN 补丁版本号
-  │       └ IPSWEN 补丁系列标识
+  │       │       └ IPswen 补丁版本号
+  │       └ IPswen 补丁系列标识
   └ 上游 Linux 5.4 LTS
 ```
 
@@ -50,7 +50,7 @@ linux-kernel/
 
 ---
 
-## IPSWEN 内核修改的六个层面
+## IPswen 内核修改的六个层面
 
 ### 第 1 层：地址数据结构
 
@@ -68,7 +68,7 @@ struct ipswen_addr {
 };
 ```
 
-IPSWEN 地址在内存中占用 4（base）+ 1（level）+ N（ext 字节）字节。
+IPswen 地址在内存中占用 4（base）+ 1（level）+ N（ext 字节）字节。
 
 ### 第 2 层：Socket 地址扩展
 
@@ -79,19 +79,19 @@ struct sockaddr_in {
     in_port_t sin_port;
     struct in_addr sin_addr;
     // ... 原有的 ...
-    struct ipswen_addr swen_addr;  // ★ 新增 IPSWEN 扩展
+    struct ipswen_addr swen_addr;  // ★ 新增 IPswen 扩展
 };
 ```
 
-应用可以通过标准的 `bind()`/`connect()`/`sendto()` 使用 IPSWEN 地址，Socket 层自动识别。
+应用可以通过标准的 `bind()`/`connect()`/`sendto()` 使用 IPswen 地址，Socket 层自动识别。
 
 ### 第 3 层：FIB（转发信息库）扩展
 
 `net/ipv4/fib_semantics.c`、`net/ipv4/fib_frontend.c`、`net/ipv4/route.c`：
 
-- 路由查找时，前缀匹配算法包含 IPSWEN 的扩展字节
-- 下一跳（nexthop/gateway）可以是 IPSWEN 地址
-- `fib_lookup()` 返回的结果中包含 IPSWEN 相关信息
+- 路由查找时，前缀匹配算法包含 IPswen 的扩展字节
+- 下一跳（nexthop/gateway）可以是 IPswen 地址
+- `fib_lookup()` 返回的结果中包含 IPswen 相关信息
 
 ### 第 4 层：Netlink 协议扩展
 
@@ -100,12 +100,12 @@ struct sockaddr_in {
 #define RTA_DST_EXT  (RTA_MAX + 1)   // 新路由属性
 ```
 
-`net/core/rtnetlink.c` 中处理此属性，允许 `ip route` 等命令通过 Netlink 向内核传递 IPSWEN 路由。
+`net/core/rtnetlink.c` 中处理此属性，允许 `ip route` 等命令通过 Netlink 向内核传递 IPswen 路由。
 
 ### 第 5 层：Socket 选项
 
 `net/core/sock.c`：
-- `IP_OPTIONS` setsockopt 在 IPSWEN 套接字上正常工作
+- `IP_OPTIONS` setsockopt 在 IPswen 套接字上正常工作
 - `SO_BINDTODEVICE` 允许绑定到特定网络设备
 
 ### 第 6 层：地址验证
@@ -134,10 +134,10 @@ struct sockaddr_in {
 ├─────────────────┼───────────────────────┤
 │                 ▼            内核态      │
 │  ┌──────────────────────────────────┐    │
-│  │  IPSWEN 扩展 FIB (路由子系统)     │    │
+│  │  IPswen 扩展 FIB (路由子系统)     │    │
 │  │  - 前缀匹配含 level+扩展字节      │    │
 │  │  - RTA_DST_EXT 属性处理          │    │
-│  │  - IPSWEN nexthop 处理           │    │
+│  │  - IPswen nexthop 处理           │    │
 │  └──────────────┬───────────────────┘    │
 │                 ▼                        │
 │  ┌──────────────────────────────────┐    │
@@ -150,7 +150,7 @@ struct sockaddr_in {
 
 ## KernelCodeSense.txt 说明
 
-此文件是 IPSWEN 相关内核源文件的索引。它列出了 `block/`、`certs/`、`crypto/` 等子系统的文件——暗示 IPSWEN 修改的触及面不限于纯网络栈。可能与内核模块签名（`certs/`）、加密 API 兼容性（`crypto/`）或存储层（`block/`）有关。
+此文件是 IPswen 相关内核源文件的索引。它列出了 `block/`、`certs/`、`crypto/` 等子系统的文件——暗示 IPswen 修改的触及面不限于纯网络栈。可能与内核模块签名（`certs/`）、加密 API 兼容性（`crypto/`）或存储层（`block/`）有关。
 
 ---
 
@@ -218,7 +218,7 @@ sudo reboot
 uname -r
 # 应输出: 5.4.0-ipswen-v1-20240124
 
-# 检查 IPSWEN 支持
+# 检查 IPswen 支持
 cat /proc/sys/net/ipv4/ipswen_enabled  # 如果存在
 # 或
 dmesg | grep -i ipswen
@@ -277,7 +277,7 @@ make net/ipv4/ && make modules && sudo make modules_install && sudo reboot
 # 3. 重新编译
 ```
 
-### 怎样调试内核 IPSWEN 路由
+### 怎样调试内核 IPswen 路由
 
 ```bash
 # 启用动态调试
@@ -294,10 +294,10 @@ echo '*ipswen*' > set_ftrace_filter
 cat trace_pipe
 ```
 
-### 怎样验证 IPSWEN 路由
+### 怎样验证 IPswen 路由
 
 ```bash
-# 添加 IPSWEN 路由（需要 iproute2-5.5.0）
+# 添加 IPswen 路由（需要 iproute2-5.5.0）
 sudo ip route add 10.0.0.0(2)128.129/33 via 192.168.1.1
 
 # 查看内核 FIB
@@ -335,13 +335,13 @@ scripts/sign-file sha512 kernel_key.pem kernel_key.x509 <module>.ko
 | 编译 OOM | 并行数多 | `make -j2` 降低并行 |
 | 模块签名失败 | Secure Boot | 进 BIOS 禁用 Secure Boot |
 | 头文件无 `ipswen.h` | 未装 headers 包 | `sudo dpkg -i linux-headers-*.deb` |
-| `ip route` 不认识 `(` 记法 | iproute2 未用 IPSWEN 版 | 安装 `../iproute2-5.5.0/` |
+| `ip route` 不认识 `(` 记法 | iproute2 未用 IPswen 版 | 安装 `../iproute2-5.5.0/` |
 
 ---
 
 ## 注意事项
 
-- 5.4 LTS 内核，IPSWEN 修改是**附加式**的——不影响标准 IPv4/IPv6 功能
+- 5.4 LTS 内核，IPswen 修改是**附加式**的——不影响标准 IPv4/IPv6 功能
 - `.deb` 包仅适用于 **amd64** 架构 (x86_64)
 - 头文件包是编译 iproute2、net-tools 等工具的前置条件
 - 内核源码树约 800-900 MB，完整编译后约 15-18 GB
@@ -353,8 +353,8 @@ scripts/sign-file sha512 kernel_key.pem kernel_key.x509 <module>.ko
 
 - **iproute2-5.5.0** —— 与本内核交互的 `ip` 命令
 - **net-tools-1.60** —— `ifconfig`/`route`
-- **bird** —— 向本内核 FIB 注入 IPSWEN 路由的 BGP 守护进程
-- **unpv13e** —— 使用本内核 IPSWEN Socket API 的示例代码
+- **bird** —— 向本内核 FIB 注入 IPswen 路由的 BGP 守护进程
+- **unpv13e** —— 使用本内核 IPswen Socket API 的示例代码
 - **happyfootball** —— Socket 级 IP 选项实验
 
 ---
@@ -377,7 +377,7 @@ scripts/sign-file sha512 kernel_key.pem kernel_key.x509 <module>.ko
 ## 附录 B: 内核日志关键字
 
 调试时搜索 `dmesg` 的关键字：
-- `ipswen` — IPSWEN 相关日志
+- `ipswen` — IPswen 相关日志
 - `RTNETLINK` — Netlink 错误
 - `FIB` — 转发信息库
 - `ICMP` — ICMP 消息

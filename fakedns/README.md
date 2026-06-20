@@ -1,12 +1,12 @@
-# fakedns —— 基于 DNS 劫持的 IPv4-to-IPv6/IPSWEN 透明代理（Shim 层）
+# fakedns —— 基于 DNS 劫持的 IPv4-to-IPv6/IPswen 透明代理（Shim 层）
 
 ## 概述
 
-`fakedns`（又名 **shim**）是一个基于 `LD_PRELOAD` 动态库注入技术的**透明网络协议转换层**。它劫持应用程序的 POSIX socket 系统调用（`getaddrinfo`、`gethostbyname`、`connect`、`close` 等），在不修改应用程序源代码的前提下，使仅支持 IPv4 的遗留应用程序能够透明地访问 IPv6 服务器和 IPSWEN 扩展地址。
+`fakedns`（又名 **shim**）是一个基于 `LD_PRELOAD` 动态库注入技术的**透明网络协议转换层**。它劫持应用程序的 POSIX socket 系统调用（`getaddrinfo`、`gethostbyname`、`connect`、`close` 等），在不修改应用程序源代码的前提下，使仅支持 IPv4 的遗留应用程序能够透明地访问 IPv6 服务器和 IPswen 扩展地址。
 
-**核心问题：** 大量遗留应用程序只调用 `getaddrinfo(..., AF_INET, ...)` 请求 IPv4 地址，直接无法与纯 IPv6 服务器通信。`fakedns` 通过伪造 DNS 解析结果（返回 240.0.0.0/8 范围内的"虚拟 IPv4"地址）和拦截 `connect()` 系统调用（将虚拟 IPv4 连接重定向到真实 IPv6/IPSWEN 地址），实现了对应用完全透明的协议转换。
+**核心问题：** 大量遗留应用程序只调用 `getaddrinfo(..., AF_INET, ...)` 请求 IPv4 地址，直接无法与纯 IPv6 服务器通信。`fakedns` 通过伪造 DNS 解析结果（返回 240.0.0.0/8 范围内的"虚拟 IPv4"地址）和拦截 `connect()` 系统调用（将虚拟 IPv4 连接重定向到真实 IPv6/IPswen 地址），实现了对应用完全透明的协议转换。
 
-**为什么叫 "fakedns"：** 因为它伪造（fake）了 DNS 解析结果。应用程序以为自己获得的 `192.168.1.1` 或 `240.0.0.5` 是一个真实的 IPv4 地址，但实际上这个地址在 `fakedns` 内部映射到了一个真实的 IPv6 地址或 IPSWEN 扩展地址。当应用程序用这个假地址发起连接时，`fakedns` 拦截 `connect()` 系统调用，替换为目标真实地址族（AF_INET6 或带 IP 选项的 AF_INET）。
+**为什么叫 "fakedns"：** 因为它伪造（fake）了 DNS 解析结果。应用程序以为自己获得的 `192.168.1.1` 或 `240.0.0.5` 是一个真实的 IPv4 地址，但实际上这个地址在 `fakedns` 内部映射到了一个真实的 IPv6 地址或 IPswen 扩展地址。当应用程序用这个假地址发起连接时，`fakedns` 拦截 `connect()` 系统调用，替换为目标真实地址族（AF_INET6 或带 IP 选项的 AF_INET）。
 
 **为什么叫 "shim"：** 因为它像一层薄垫片（shim）插入在应用程序和操作系统内核之间，对上下双方都是透明的。
 
@@ -84,7 +84,7 @@ fakedns/
     ┌──────────────▼──────────────┐
     │     Linux Kernel            │
     │  (AF_INET6 / AF_INET        │
-    │   + IPSWEN IP_OPTIONS)      │
+    │   + IPswen IP_OPTIONS)      │
     └─────────────────────────────┘
 ```
 
@@ -387,7 +387,7 @@ return rc;
 ```cpp
 extern "C" int getaddrinfo(const char *node, const char *service,
                             const struct addrinfo *hints, struct addrinfo **res) {
-    // Step 1: 检查是否是 IPSWEN 扩展地址格式（"1.2.3.4(2)0.99"）
+    // Step 1: 检查是否是 IPswen 扩展地址格式（"1.2.3.4(2)0.99"）
     if (parse_ipv4_with_ext_target(node, direct)) {
         // 直接分配一个 VIP 并返回 AF_INET addrinfo
         uint32_t fake = DnsMapper::instance().get_fake_ip(direct);
@@ -451,7 +451,7 @@ extern "C" ssize_t read(int fd, void *buf, size_t count) {
 
 ---
 
-### 4. IP 选项注入 —— IPSWEN 扩展地址支持
+### 4. IP 选项注入 —— IPswen 扩展地址支持
 
 ```cpp
 bool inject_dest_ext_option(int fd, uint32_t ext) {

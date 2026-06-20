@@ -1,10 +1,10 @@
-# unpv13e —— Unix 网络编程示例集（含 IPSWEN Ping）
+# unpv13e —— Unix 网络编程示例集（含 IPswen Ping）
 
 ## 概述
 
 这是 W. Richard Stevens 经典著作《Unix Network Programming, Volume 1, Third Edition》（简称 UNP）配套示例代码的修改版。原书是全球网络编程领域的圣经级参考资料——全面覆盖 TCP/UDP、Socket API、路由、多播、信号驱动 I/O、线程等主题。
 
-本版本在 `ping` 工具中集成了 IPSWEN 地址支持。其余 20+ 章的代码保持原样，作为标准网络编程的可信参考基线，用于与 IPSWEN 修改代码进行对照验证。
+本版本在 `ping` 工具中集成了 IPswen 地址支持。其余 20+ 章的代码保持原样，作为标准网络编程的可信参考基线，用于与 IPswen 修改代码进行对照验证。
 
 ---
 
@@ -12,8 +12,8 @@
 
 ```
 unpv13e/
-├── ping/             # ★ ICMP Ping（IPSWEN 修改所在）
-│   ├── main.c        # EXPERIMENTAL_IPSWEN 宏，ipswen_aton/ntoa 调用
+├── ping/             # ★ ICMP Ping（IPswen 修改所在）
+│   ├── main.c        # EXPERIMENTAL_IPswen 宏，ipswen_aton/ntoa 调用
 │   ├── ping.h        # 协议头
 │   └── old/          # 旧版 ping
 │
@@ -31,7 +31,7 @@ unpv13e/
 ├── key/              # 密钥管理 socket（第19章）
 ├── sock/             # 原始 socket（第28章）
 ├── sockopt/          # Socket 选项（第7章）
-├── ipopts/           # IP 选项（第27章）★ IPSWEN 直接相关
+├── ipopts/           # IP 选项（第27章）★ IPswen 直接相关
 ├── traceroute/       # Traceroute（第28章）
 ├── advio/            # 高级 I/O（第14章）
 ├── nonblock/         # 非阻塞 I/O（第16章）★ Happy Eyeballs 参考
@@ -50,7 +50,7 @@ unpv13e/
 ├── streams/          # STREAMS
 ├── test/             # 测试程序
 │
-├── config.h.in       # 配置模板（#define HAVE_IPSWEN 1）
+├── config.h.in       # 配置模板（#define HAVE_IPswen 1）
 ├── configure / configure.in
 ├── Makefile.in / Make.defines.in
 ├── aclocal.m4 / config.guess / config.sub
@@ -59,29 +59,29 @@ unpv13e/
 
 ---
 
-## IPSWEN 修改详解
+## IPswen 修改详解
 
 ### ping/main.c —— 地址解析流
 
 ```c
-#define EXPERIMENTAL_IPSWEN    // ★ 开启 IPSWEN 路径
+#define EXPERIMENTAL_IPswen    // ★ 开启 IPswen 路径
 
 int main(int argc, char **argv) {
     // ... 参数解析 ...
 
     host = argv[optind];        // 目标主机名或地址
 
-#ifndef EXPERIMENTAL_IPSWEN
+#ifndef EXPERIMENTAL_IPswen
     // === 标准路径 ===
     struct hostent *hp = gethostbyname(host);
     // 或 inet_aton(host, &addr)
 #else
-    // === IPSWEN 增强路径 ===
+    // === IPswen 增强路径 ===
     struct addrinfo *ai;
 
-    // 先尝试 IPSWEN 解析
+    // 先尝试 IPswen 解析
     if (!ipswen_aton(&((struct sockaddr_in *)ai->ai_addr)->swen_addr, host)) {
-        // 成功解析为 IPSWEN 格式
+        // 成功解析为 IPswen 格式
         // → 直接使用解析结果，不经过 DNS
     } else {
         // 回退：先尝试标准 gethostbyname
@@ -95,35 +95,35 @@ int main(int argc, char **argv) {
 }
 ```
 
-**解析优先级：** IPSWEN 记法 → gethostbyname (DNS) → inet_aton (标准 IPv4)
+**解析优先级：** IPswen 记法 → gethostbyname (DNS) → inet_aton (标准 IPv4)
 这种设计确保了：
-- 输入 `10.0.0.1(2)128.129` 被识别为 IPSWEN 地址
+- 输入 `10.0.0.1(2)128.129` 被识别为 IPswen 地址
 - 输入 `www.example.com` 走 DNS 解析
 - 输入 `192.168.1.1` 走标准 IPv4 解析
 
-**为什么放在 ping 中？** ping 是最常用的网络诊断工具。通过在 ping 中集成 IPSWEN，研究人员可以直接用 `ping 10.0.0.1(2)128.129` 测试 IPSWEN 地址的连通性——无需任何额外的测试工具。
+**为什么放在 ping 中？** ping 是最常用的网络诊断工具。通过在 ping 中集成 IPswen，研究人员可以直接用 `ping 10.0.0.1(2)128.129` 测试 IPswen 地址的连通性——无需任何额外的测试工具。
 
 ### config.h.in
 
 ```c
-/* Define to 1 if the system supports IPSWEN */
-#define HAVE_IPSWEN 1
+/* Define to 1 if the system supports IPswen */
+#define HAVE_IPswen 1
 ```
 
 默认启用。`configure` 脚本执行时会检查系统头文件，确认 `ipswen_aton`/`ipswen_ntoa` 函数可用。
 
 ---
 
-## 各章示例与 IPSWEN 研究的关联
+## 各章示例与 IPswen 研究的关联
 
-| 目录 | 章节主题 | 对 IPSWEN 研究的作用 |
+| 目录 | 章节主题 | 对 IPswen 研究的作用 |
 |------|---------|-------------------|
-| `ping/` | ICMP Ping | **已修改为支持 IPSWEN 地址** |
+| `ping/` | ICMP Ping | **已修改为支持 IPswen 地址** |
 | `ipopts/` | IP 选项 | IP 选项 socket API 的标准参考——理解 `setsockopt(IP_OPTIONS)` 的正确用法 |
-| `traceroute/` | 路由追踪 | 标准 traceroute 实现，可对比 IPSWEN traceroute |
+| `traceroute/` | 路由追踪 | 标准 traceroute 实现，可对比 IPswen traceroute |
 | `sockopt/` | Socket 选项 | `IP_OPTIONS`、`SO_BINDTODEVICE`、`SO_ERROR` 的权威参考 |
 | `nonblock/` | 非阻塞 I/O | 异步 connect 模式——happyfootball 的 `select_socket()` 即基于此模式 |
-| `route/` | 路由 Socket | 内核路由表交互——理解 IPSWEN FIB 的用户态视角 |
+| `route/` | 路由 Socket | 内核路由表交互——理解 IPswen FIB 的用户态视角 |
 | `tcpcliserv/` | TCP C/S | TCP 标准实现基线 |
 | `udpcliserv/` | UDP C/S | UDP 标准实现基线 |
 | `select/` | I/O 多路复用 | `select()` 的标准用法 |
@@ -148,10 +148,10 @@ cd ping
 make ping
 ```
 
-### IPSWEN Ping 使用
+### IPswen Ping 使用
 
 ```bash
-# Ping 一个 IPSWEN 地址（level=2, 扩展字节 128.129）
+# Ping 一个 IPswen 地址（level=2, 扩展字节 128.129）
 sudo ./ping 10.0.0.1(2)128.129
 
 # Ping 标准 IPv4（向后兼容）
@@ -177,37 +177,37 @@ cd tcpcliserv
 
 ## 实验定制指南
 
-### 怎样暂时禁用 IPSWEN
+### 怎样暂时禁用 IPswen
 
-注释掉 `ping/main.c` 中的 `#define EXPERIMENTAL_IPSWEN`，重新编译。这将使 ping 恢复标准 IPv4-only 行为。
+注释掉 `ping/main.c` 中的 `#define EXPERIMENTAL_IPswen`，重新编译。这将使 ping 恢复标准 IPv4-only 行为。
 
-### 怎样在 traceroute 中加入 IPSWEN
+### 怎样在 traceroute 中加入 IPswen
 
-参考 `ping/main.c` 的 `#ifdef EXPERIMENTAL_IPSWEN` 模式，在 `traceroute/main.c` 的目标地址解析部分加入相同逻辑。
+参考 `ping/main.c` 的 `#ifdef EXPERIMENTAL_IPswen` 模式，在 `traceroute/main.c` 的目标地址解析部分加入相同逻辑。
 
 ---
 
 ## 注意事项
 
-- `EXPERIMENTAL_IPSWEN` 宏硬编码在 `main.c`——不需要修改 `config.h` 或其他头文件
-- `ipswen_aton()` 和 `ipswen_ntoa()` 是**外部函数**——由系统的 C 库或 IPSWEN 支持库提供（通常来自内核头文件编译的支持库）
-- 如果系统没有安装 IPSWEN 头文件，ping 编译会因缺少这些符号而失败——此时需注释掉 `#define EXPERIMENTAL_IPSWEN`
-- 其余 20+ 章代码是**原始 unpv13e**——它们是标准网络编程的权威参考，不受 IPSWEN 修改影响
+- `EXPERIMENTAL_IPswen` 宏硬编码在 `main.c`——不需要修改 `config.h` 或其他头文件
+- `ipswen_aton()` 和 `ipswen_ntoa()` 是**外部函数**——由系统的 C 库或 IPswen 支持库提供（通常来自内核头文件编译的支持库）
+- 如果系统没有安装 IPswen 头文件，ping 编译会因缺少这些符号而失败——此时需注释掉 `#define EXPERIMENTAL_IPswen`
+- 其余 20+ 章代码是**原始 unpv13e**——它们是标准网络编程的权威参考，不受 IPswen 修改影响
 
 ---
 
 ## 相关项目
 
-- **linux-kernel** (`../linux-kernel/`) —— 提供 IPSWEN Socket API 的内核
+- **linux-kernel** (`../linux-kernel/`) —— 提供 IPswen Socket API 的内核
 - **happyfootball** (`../happyfootball/`) —— 基于非阻塞 connect 的地址选择实验
-- **iproute2 / net-tools** —— IPSWEN 用户态工具链
-- **bird** —— IPSWEN BGP 路由
+- **iproute2 / net-tools** —— IPswen 用户态工具链
+- **bird** —— IPswen BGP 路由
 
 ---
 
 ## 附录 A: 完整目章节索引
 
-| 章节 | 目录 | 内容 | IPSWEN关联 |
+| 章节 | 目录 | 内容 | IPswen关联 |
 |------|------|------|-----------|
 | 1 | intro/ | 简介 | 无 |
 | 3 | sock/ | 原始Socket | 无 |
@@ -232,15 +232,15 @@ cd tcpcliserv
 | 28 | ping/ | Ping | ★ 已修改 |
 | 28 | icmpd/ | ICMP 守护 | 中 |
 
-## 附录 B: 如何新增 IPSWEN 支持到其他示例
+## 附录 B: 如何新增 IPswen 支持到其他示例
 
 以 `traceroute` 为例：
 1. 打开 `traceroute/main.c`
 2. 在地址解析处添加：
 ```c
-#ifdef EXPERIMENTAL_IPSWEN
+#ifdef EXPERIMENTAL_IPswen
     if (!ipswen_aton(&sin->swen_addr, host)) {
-        // 使用 IPSWEN 解析
+        // 使用 IPswen 解析
     } else
 #endif
     // 原有 gethostbyname 回退
