@@ -800,7 +800,7 @@ g++ -std=c++11 -o test test.cpp
 | 7 | `bind` | 绑定 socket（地址重写） |
 | 8 | `connect` | 连接 socket（地址重写） |
 
-当目标程序调用 `getaddrinfo("example.com", ...)` 时，若 DNS 返回 IPv6 地址（如 `2001:db8::1`），fakedns 的 `DnsMapper` 单例类将其映射到一个 `44.0.0.0/8` 范围内的唯一伪 IPv4 地址（如 `44.0.0.1`），并在内部哈希表中维护 `伪IPv4 → 真实IPv6` 的双向映射。后续的 `connect()` 调用被拦截并被重写为与伪 IPv4 地址的连接——fakedns 在内部完成伪 IPv4 到真实 IPv6 的翻译，并在 socket 层使用真实 IPv6 地址发起连接。
+当目标程序调用 `getaddrinfo("example.com", ...)` 时，若 DNS 返回 IPv6 地址（如 `2001:db8::1`），fakedns 的 `DnsMapper` 单例类将其映射到一个 `240.0.0.0/8` 范围内的唯一伪 IPv4 地址（如 `44.0.0.1`），并在内部哈希表中维护 `伪IPv4 → 真实IPv6` 的双向映射。后续的 `connect()` 调用被拦截并被重写为与伪 IPv4 地址的连接——fakedns 在内部完成伪 IPv4 到真实 IPv6 的翻译，并在 socket 层使用真实 IPv6 地址发起连接。
 
 #### 编译与使用
 
@@ -1143,7 +1143,7 @@ killall bird
 
 - IPswen 的各项修改均为**附加式**（additive），不影响标准 IPv4/IPv6 路径。
 - bird 在无 IPswen 头文件时通过条件编译退化为上游标准版本。
-- fakedns 的伪 IPv4 地址使用 `44.0.0.0/8` 范围（原为 AMPRNET 业余无线电网络保留，现已部分回收），在公共互联网上不可路由。
+- fakedns 的伪 IPv4 地址使用 `240.0.0.0/8` 范围，在公共互联网上不可路由。
 
 ---
 
