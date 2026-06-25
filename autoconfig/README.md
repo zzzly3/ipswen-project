@@ -1,28 +1,30 @@
-# autoconfig —— 自动化 GRE 隧道配置工具
+# autoconfig —— 自动化 GRE 隧道配置工具 / Automated GRE Tunnel Configuration Tool
 
-## 概述
+## 概述 / Overview
 
 `autoconfig` 是一个轻量级 C/S 架构工具，用于**完全自动化**测试床中 GRE 隧道的建立和拆除。在许多网络研究场景中，需要频繁改变拓扑——手工 `ip tun add/del` 极易出错且不可扩展。此工具通过简单的 JSON-over-TCP 协议让任意数量的 Spoke 节点动态连接到 Hub。
 
-**使用场景：**
-- 动态拓扑实验：节点随时加入/离开 overlay 网络
-- GRE 承载的 BGP Full-Mesh 测试
-- 大规模隧道自动化部署
+`autoconfig` is a lightweight C/S architecture tool for **fully automating** the creation and removal of GRE tunnels in a testbed. In many network research scenarios, topologies need to be changed frequently — manually using `ip tun add/del` is error-prone and not scalable. This tool allows any number of Spoke nodes to dynamically connect to a Hub through a simple JSON-over-TCP protocol.
+
+**使用场景 / Use Cases:**
+- 动态拓扑实验：节点随时加入/离开 overlay 网络 / Dynamic topology experiments: nodes join/leave the overlay network at any time
+- GRE 承载的 BGP Full-Mesh 测试 / BGP Full-Mesh testing over GRE
+- 大规模隧道自动化部署 / Large-scale automated tunnel deployment
 
 ---
 
-## 目录结构
+## 目录结构 / Directory Structure
 
 ```
 autoconfig/
-├── server.py      # 隧道分配服务（Hub 节点运行）
-├── client.py      # 隧道客户端（Spoke 节点运行）
-└── 1.ipynb        # Jupyter Notebook（实验记录）
+├── server.py      # 隧道分配服务（Hub 节点运行）/ Tunnel allocation service (runs on Hub)
+├── client.py      # 隧道客户端（Spoke 节点运行）/ Tunnel client (runs on Spoke)
+└── 1.ipynb        # Jupyter Notebook（实验记录）/ Experiment records
 ```
 
 ---
 
-## 架构与协议
+## 架构与协议 / Architecture & Protocol
 
 ```
   Spoke A (client.py)           Hub (server.py)           Spoke B
@@ -32,30 +34,32 @@ autoconfig/
   └──────────────┘              └────────────────┘       └──────────┘
 ```
 
-### 协议
+### 协议 / Protocol
 
-1. TCP 连接 `server:1111`
-2. Client → Server: `{"type": "connect"}` 或 `"disconnect"}\n`
+1. TCP 连接 `server:1111` / TCP connection to `server:1111`
+2. Client → Server: `{"type": "connect"}` 或 `{"type": "disconnect"}\n`
 3. Server → Client: `{"status": "success", "cidr": "A.B.C.D/NN"}` 或 `{"status": "fail", "reason": "..."}`
 
-### 隧道命名
+### 隧道命名 / Tunnel Naming
 
 ```python
 idx = server_addr.split('.')[-1] + server_addr.split('.')[-2]
 # server=192.168.1.253 → idx="2531" → tun-2531
 ```
 
-### 地址池
+### 地址池 / Address Pool
 
 `192.168.1.0/24` 中 128 个 `/31` 子网，每对点对点隧道使用一个。
 
+128 `/31` subnets from `192.168.1.0/24`, each used by a pair of point-to-point tunnels.
+
 ---
 
-## 源码全文解析
+## 源码全文解析 / Full Source Code Analysis
 
 ### server.py
 
-#### Tunnel 类
+#### Tunnel 类 / Tunnel Class
 
 ```python
 class Tunnel:
@@ -81,9 +85,13 @@ class Tunnel:
 
 **`assert` 的作用：** 如果 `ip` 命令返回非零（失败），程序立即崩溃——这是一种"快速失败"策略。比静默忽略错误更安全，因为半建立的隧道会导致后续问题。
 
+**The purpose of `assert`:** If the `ip` command returns non-zero (failure), the program crashes immediately — a "fail-fast" strategy. It is safer than silently ignoring errors, as half-established tunnels cause downstream problems.
+
 **`idx` 的哈希设计：** `hash(client_ip) % 0x1000000` 取 24 位哈希值，转十六进制（最多 6 位）。这样不同客户端 IP 总是得到不同的 idx，且 IP 不变则 idx 不变（幂等性——重复 connect/disconnect 使用同一隧道名）。
 
-#### MyTCPHandler
+**Hash design of `idx`:** `hash(client_ip) % 0x1000000` takes a 24-bit hash value, converted to hexadecimal (up to 6 digits). Different client IPs always get different idx values, and the same IP always gets the same idx (idempotent — repeated connect/disconnect uses the same tunnel name).
+
+#### MyTCPHandler / MyTCPHandler
 
 ```python
 class MyTCPHandler(socketserver.StreamRequestHandler):
@@ -110,12 +118,14 @@ class MyTCPHandler(socketserver.StreamRequestHandler):
 ```
 
 四个边界情况全覆盖：
-1. **资源耗尽**：`len(cidr_to_alloc) == 0`
-2. **重复连接**：同 IP 已在 `installed_tunnels`
-3. **未连接就断开**：IP 不在 `installed_tunnels`
-4. **未知请求类型**：else 分支返回错误
+1. **资源耗尽**：`len(cidr_to_alloc) == 0` / Resource exhausted
+2. **重复连接**：同 IP 已在 `installed_tunnels` / Duplicate connection: same IP already in `installed_tunnels`
+3. **未连接就断开**：IP 不在 `installed_tunnels` / Disconnect without connection: IP not in `installed_tunnels`
+4. **未知请求类型**：else 分支返回错误 / Unknown request type: else branch returns error
 
-#### 优雅退出
+All four edge cases are covered.
+
+#### 优雅退出 / Graceful Exit
 
 ```python
 if __name__ == '__main__':
@@ -128,6 +138,8 @@ if __name__ == '__main__':
 ```
 
 `list()` 包裹是因为在迭代时修改 dict——先复制一份所有隧道列表，逐个卸载。
+
+`list()` wrapping is needed because the dict is being modified during iteration — a copy of all tunnels is made first, then each is uninstalled.
 
 ### client.py
 
@@ -154,9 +166,11 @@ if action == 'connect':
 
 **设计细节：** `disconnect` 时客户端**不管服务端响应如何都先删本地隧道**——这样可以清理即使服务端状态已丢失的残留隧道。
 
+**Design detail:** On `disconnect`, the client **deletes the local tunnel regardless of the server response** — this cleans up residual tunnels even if the server's state has been lost.
+
 ---
 
-## MTU 设计
+## MTU 设计 / MTU Design
 
 ```
 1500 (以太网)
@@ -169,34 +183,36 @@ if action == 'connect':
 
 26 字节预留支持实验性 IP 选项（最大 40 字节）。如果路径涉及多层封装（IP-in-IP over GRE），需要进一步降低。
 
+26 bytes reserved for experimental IP options (max 40 bytes). If the path involves multiple layers of encapsulation (IP-in-IP over GRE), further reduction is needed.
+
 ---
 
-## 实验定制指南
+## 实验定制指南 / Experiment Customization Guide
 
-### 扩展地址池
+### 扩展地址池 / Expanding the Address Pool
 
 ```python
-# 512 个 /31（从 /23 中）
+# 512 个 /31（从 /23 中）/ 512 /31 subnets (from a /23)
 for i in range(512):
     cidr_to_alloc.append((f'10.0.0.{i*2}/31', f'10.0.0.{i*2+1}/31'))
 ```
 
-### 改隧道类型
+### 改隧道类型 / Changing Tunnel Type
 
 ```python
 # GRE → IP-in-IP
 os.system(f'ip tun add tun-{idx} mode ipip remote ... local ...')
 ```
 
-### 加认证
+### 加认证 / Adding Authentication
 
 ```python
-# server 验证
+# server 验证 / Server validation
 if req.get('token') != 'my_secret':
     return {'status': 'fail', 'reason': 'Auth required'}
 ```
 
-### 集成到 bash 脚本
+### 集成到 bash 脚本 / Integration into bash Scripts
 
 ```bash
 #!/bin/bash
@@ -207,7 +223,7 @@ ping -c 3 192.168.1.0 && echo "Tunnel OK" || echo "Tunnel FAIL"
 
 ---
 
-## 依赖
+## 依赖 / Dependencies
 
 - Python 3.6+（stdlib 仅 `json, socket, os, sys, socketserver`）
 - Linux `CONFIG_NET_IPGRE`
@@ -215,29 +231,29 @@ ping -c 3 192.168.1.0 && echo "Tunnel OK" || echo "Tunnel FAIL"
 
 ---
 
-## 故障排查
+## 故障排查 / Troubleshooting
 
-| 症状 | 最可能原因 | 验证 | 解决 |
+| 症状 / Symptom | 最可能原因 / Most Likely Cause | 验证 / Verify | 解决 / Solution |
 |------|----------|------|------|
-| `Network is unreachable` | 防火墙堵 1111 | `nc -zv server 1111` | 放行 TCP 1111 |
-| `No enough resources` | 128 个 /31 全占满 | 杀掉无用连接 | 扩大地址池 |
-| `File exists` | 隧道名冲突 | `ip link show | grep tun` | 手动 `ip link del` |
-| ping 不通 | GRE(proto 47) 被拦 | `tcpdump -i eth0 proto 47` | `iptables -A INPUT -p 47 -j ACCEPT` |
-| 服务端崩后残留 | 状态仅内存 | `ip link show | grep tun` | 各客户端手动清理 |
+| `Network is unreachable` | 防火墙堵 1111 / Firewall blocking 1111 | `nc -zv server 1111` | 放行 TCP 1111 / Allow TCP 1111 |
+| `No enough resources` | 128 个 /31 全占满 / All 128 /31 subnets in use | 杀掉无用连接 / Kill unused connections | 扩大地址池 / Expand address pool |
+| `File exists` | 隧道名冲突 / Tunnel name conflict | `ip link show \| grep tun` | 手动 `ip link del` / Manual `ip link del` |
+| ping 不通 / ping fails | GRE(proto 47) 被拦 / GRE(proto 47) blocked | `tcpdump -i eth0 proto 47` | `iptables -A INPUT -p 47 -j ACCEPT` |
+| 服务端崩后残留 / Residual after server crash | 状态仅内存 / State is memory-only | `ip link show \| grep tun` | 各客户端手动清理 / Manual cleanup on each client |
 
 ---
 
-## 相关项目
+## 相关项目 / Related Projects
 
-- **bird** —— 隧道上的 BGP 路由
-- **mrtdb** —— 连通性测试
-- **happyfootball** —— 隧道接口上的地址选择测试
+- **bird** —— 隧道上的 BGP 路由 / BGP routing over tunnels
+- **mrtdb** —— 连通性测试 / Connectivity testing
+- **happyfootball** —— 隧道接口上的地址选择测试 / Address selection testing on tunnel interfaces
 
 ---
 
-## 附录 A: 快速部署脚本
+## 附录 A: 快速部署脚本 / Quick Deployment Scripts
 
-### Hub 节点一键启动
+### Hub 节点一键启动 / One-click Hub Startup
 ```bash
 #!/bin/bash
 # hub_start.sh
@@ -246,19 +262,19 @@ sudo python3 server.py &
 echo "Hub server started on :1111"
 ```
 
-### Spoke 节点一键连接
+### Spoke 节点一键连接 / One-click Spoke Connection
 ```bash
 #!/bin/bash
 # spoke_connect.sh
 SERVER=${1:-192.168.1.253}
 cd $(dirname $0)
 sudo python3 client.py connect $SERVER
-# 验证
+# 验证 / Verify
 MYIP=$(python3 -c "import socket;s=socket.socket();s.connect(('$SERVER',1111));print(s.getsockname()[0])")
 ping -c 3 -W 2 $(echo $MYIP | awk -F. '{print $1"."$2"."$3"."($4%2==0?$4+1:$4-1)}')
 ```
 
-### 一键断开所有
+### 一键断开所有 / Disconnect All Tunnels
 ```bash
 #!/bin/bash
 for TUN in $(ip link show | grep -oP 'tun-\w+'); do
@@ -266,23 +282,23 @@ for TUN in $(ip link show | grep -oP 'tun-\w+'); do
 done
 ```
 
-## 附录 B: 扩展地址池示例
+## 附录 B: 扩展地址池示例 / Extended Address Pool Examples
 
-### 大容量 /24 池（256 个 /31）
+### 大容量 /24 池（256 个 /31）/ Large /24 Pool (256 /31 subnets)
 ```python
 cidr_to_alloc = []
 for i in range(256):
     cidr_to_alloc.append((f'10.99.0.{i*2}/31', f'10.99.0.{i*2+1}/31'))
 ```
 
-### 多 /24 池（1024 个 /31）
+### 多 /24 池（1024 个 /31）/ Multi-/24 Pool (1024 /31 subnets)
 ```python
 for subnet in range(4):
     for i in range(256):
         cidr_to_alloc.append((f'10.{subnet}.{i//2}.{(i%2)*128}/31', ...))
 ```
 
-## 附录 C: 隧道状态检查脚本
+## 附录 C: 隧道状态检查脚本 / Tunnel Status Check Script
 ```bash
 #!/bin/bash
 echo "Active tunnels:"
